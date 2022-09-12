@@ -166,6 +166,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic init */
                     if (ssd1681_basic_init() != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -237,6 +239,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic clear */
                     if (ssd1681_basic_clear(color) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -293,6 +297,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic string */
                     if (ssd1681_basic_string(color, 0, 0, argv[5], (uint16_t)strlen(argv[5]), 1, SSD1681_FONT_16) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -351,6 +357,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic read point */
                     if (ssd1681_basic_read_point(color, (uint8_t)atoi(argv[5]), (uint8_t)atoi(argv[6]), &data) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -407,6 +415,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic write point */
                     if (ssd1681_basic_write_point(color, (uint8_t)atoi(argv[5]), (uint8_t)atoi(argv[6]), (uint8_t)atoi(argv[7])) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -463,6 +473,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic write rect */
                     if (ssd1681_basic_rect(color, (uint8_t)atoi(argv[5]), (uint8_t)atoi(argv[6]), (uint8_t)atoi(argv[7]), (uint8_t)atoi(argv[8]), 1) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
