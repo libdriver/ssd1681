@@ -170,6 +170,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic init */
                     if (ssd1681_basic_init() != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -241,6 +243,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic clear */
                     if (ssd1681_basic_clear(color) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -297,6 +301,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic string */
                     if (ssd1681_basic_string(color, 0, 0, argv[5], strlen(argv[5]), 1, SSD1681_FONT_16) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -355,6 +361,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic string */
                     if (ssd1681_basic_read_point(color, atoi(argv[5]), atoi(argv[6]), &data) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -411,6 +419,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic string */
                     if (ssd1681_basic_write_point(color, atoi(argv[5]), atoi(argv[6]), atoi(argv[7])) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -467,6 +477,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
                     /* basic write rect */
                     if (ssd1681_basic_rect(color, atoi(argv[5]), atoi(argv[6]), atoi(argv[7]), atoi(argv[8]), 1) != 0)
                     {
+                        (void)ssd1681_basic_deinit();
+                        
                         return 1;
                     }
                     else
@@ -509,6 +521,8 @@ uint8_t ssd1681(uint8_t argc, char** argv)
  */
 static uint8_t a_socket_init(void)
 {
+    int optval;
+
     if ((gs_listen_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0) 
     {
         ssd1681_interface_debug_print("ssd1681: cread socket failed.\n");
@@ -521,6 +535,13 @@ static uint8_t a_socket_init(void)
     gs_server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     gs_server_addr.sin_port = htons(6666);
 
+    optval = 1;
+    if (setsockopt(gs_listen_fd, SOL_SOCKET, SO_REUSEADDR, (char *)&optval, sizeof(optval)))
+    {
+        ssd1681_interface_debug_print("ssd1681: cread socket failed.\n");
+        
+        return 1;
+    }
     if (bind(gs_listen_fd, (struct sockaddr*)&gs_server_addr, sizeof(gs_server_addr)) < 0) 
     {
         ssd1681_interface_debug_print("ssd1681: bind failed.\n");

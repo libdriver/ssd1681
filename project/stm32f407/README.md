@@ -1,6 +1,6 @@
-### 1. chip
+### 1. Chip
 
-#### 1.1 chip info
+#### 1.1 Chip Info
 
 chip name : STM32F407ZGT6.
 
@@ -12,23 +12,23 @@ spi pin: SCK/MISO/MOSI/CS PA5/PA6/PA7/PA4.
 
 gpio pin: command pin/reset pin/busy pin PB1/PB0/PA8.
 
-### 2. shell
+### 2. Shell
 
-#### 2.1 shell parameter
+#### 2.1 Shell Parameter
 
-baud rate: 115200
+baud rate: 115200.
 
-data bits : 8
+data bits : 8.
 
-stop bits: 1
+stop bits: 1.
 
-parity: none
+parity: none.
 
-flow control: none
+flow control: none.
 
-### 3. ssd1681
+### 3. SSD1681
 
-#### 3.1 command Instruction
+#### 3.1 Command Instruction
 
 ​            ssd1681 is a basic command which can test all ssd1681 driver function:
 
@@ -58,7 +58,7 @@ flow control: none
 
 ​            -c basic (-r | -b)  -rect <x1> <y1> <x2> <y2>        run ssd1681 drawing rectangle function. x1 means x start. y1 means y start. x2 means x end. y2 means y end.
 
-#### 3.2 command example
+#### 3.2 Command Example
 
 ```shell
 ssd1681 -i

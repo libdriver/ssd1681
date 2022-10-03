@@ -65,18 +65,24 @@ uint8_t g_image[40000];
 /* basic init */
 if (ssd1681_basic_init() != 0)
 {
+    (void)ssd1681_basic_deinit();
+    
     return 1;
 }
 
 /* clear the red color */
 if (ssd1681_basic_clear(SSD1681_COLOR_RED) != 0)
 {
+    (void)ssd1681_basic_deinit();
+    
     return 1;
 }
 
 /* clear the black color */
 if (ssd1681_basic_clear(SSD1681_COLOR_BLACK) != 0)
 {
+    (void)ssd1681_basic_deinit();
+    
     return 1;
 }
 
@@ -85,6 +91,8 @@ if (ssd1681_basic_clear(SSD1681_COLOR_BLACK) != 0)
 /* basic string */
 if (ssd1681_basic_string(SSD1681_COLOR_RED, 0, 0, str, (uint16_t)strlen(str), 1, SSD1681_FONT_16) != 0)
 {
+    (void)ssd1681_basic_deinit();
+    
     return 1;
 }
 
@@ -93,6 +101,8 @@ if (ssd1681_basic_string(SSD1681_COLOR_RED, 0, 0, str, (uint16_t)strlen(str), 1,
 /* basic point read */
 if (ssd1681_basic_read_point(SSD1681_COLOR_RED, 16, 16, &data) != 0)
 {
+    (void)ssd1681_basic_deinit();
+    
     return 1;
 }
 
@@ -101,6 +111,8 @@ if (ssd1681_basic_read_point(SSD1681_COLOR_RED, 16, 16, &data) != 0)
 /* basic write point */
 if (ssd1681_basic_write_point(SSD1681_COLOR_BLACK, 20, 20, 1) != 0)
 {
+    (void)ssd1681_basic_deinit();
+    
     return 1;
 }
 
@@ -109,6 +121,8 @@ if (ssd1681_basic_write_point(SSD1681_COLOR_BLACK, 20, 20, 1) != 0)
 /* basic write rect */
 if (ssd1681_basic_rect(SSD1681_COLOR_BLACK, 0, 0, 32, 32), 1) != 0)
 {
+    (void)ssd1681_basic_deinit();
+    
     return 1;
 }
 
@@ -117,6 +131,8 @@ if (ssd1681_basic_rect(SSD1681_COLOR_BLACK, 0, 0, 32, 32), 1) != 0)
 /* basic draw the picture */
 if (ssd1681_basic_picture(SSD1681_COLOR_BLACK, 0, 0, 200, 200, g_image) != 0)
 {
+    (void)ssd1681_basic_deinit();
+    
     return 1;
 }
 
