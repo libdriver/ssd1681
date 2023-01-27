@@ -2,61 +2,111 @@
 
 #### 1.1 Chip Info
 
-chip name : STM32F407ZGT6.
+Chip Name: STM32F407ZGT6.
 
-extern oscillator : 8MHz.
+Extern Oscillator: 8MHz.
 
-uart pin: TX/RX PA9/PA10.
+UART Pin: TX/RX PA9/PA10.
 
-spi pin: SCK/MISO/MOSI/CS PA5/PA6/PA7/PA4.
+SPI Pin: SCK/MISO/MOSI/CS PA5/PA6/PA7/PA4.
 
-gpio pin: command pin/reset pin/busy pin PB1/PB0/PA8.
+GPIO Pin: CMD/RESET/BUSY PB1/PB0/PA8.
 
-### 2. Shell
+### 2. Development and Debugging
 
-#### 2.1 Shell Parameter
+#### 2.1 Integrated Development Environment
 
-baud rate: 115200.
+LidDriver provides both Keil and IAR integrated development environment projects.
 
-data bits : 8.
+MDK is the Keil ARM project and your Keil version must be 5 or higher.Keil ARM project needs STMicroelectronics STM32F4 Series Device Family Pack and you can download from https://www.keil.com/dd2/stmicroelectronics/stm32f407zgtx.
 
-stop bits: 1.
+EW is the IAR ARM project and your IAR version must be 9 or higher.
 
-parity: none.
+#### 2.2 Serial Port Parameter
 
-flow control: none.
+Baud Rate: 115200.
+
+Data Bits : 8.
+
+Stop Bits: 1.
+
+Parity: None.
+
+Flow Control: None.
+
+#### 2.3 Serial Port Assistant
+
+We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g. the displayed content does not divide lines), please modify the configuration of your serial port assistant or replace one that supports '\n' parsing.
 
 ### 3. SSD1681
 
 #### 3.1 Command Instruction
 
-​            ssd1681 is a basic command which can test all ssd1681 driver function:
+1. Show ssd1681 chip and driver information.
 
-​            -i        show ssd1681 chip and driver information.
+   ```shell
+   ssd1681 (-i | --information)
+   ```
 
-​            -h       show ssd1681 help.
+2. Show ssd1681 help.
 
-​            -p       show ssd1681 pin connections of the current board.
+   ```shell
+   ssd1681 (-h | --help)
+   ```
 
-​            -t display
+3. Show ssd1681 pin connections of the current board.
 
-​            -t display        run ssd1681 display test. 
+   ```shell
+   ssd1681 (-p | --port)
+   ```
 
-​            -c basic (-init | -deinit | (-r | -b) -str <string> |  (-r | -b) -clear | (-r | -b)  -writepoint <x> <y> <data> | (-r | -b)  -readpoint <x> <y> |  (-r | -b)  -rect <x1> <y1> <x2> <y2>)
+4. Run ssd1681 display test.
 
-​            -c basic -init        run ssd1681 init function. 
+   ```shell
+   ssd1681 (-t display | --test=display)
+   ```
 
-​            -c basic -deinit        run ssd1681 deinit function. 
+5. Run ssd1681 init function.
 
-​            -c basic  (-r | -b)  -str <string>        run ssd1681 show string function. string is the shown string. 
+   ```shell
+   ssd1681 (-e basic-init | --example=basic-init)
+   ```
 
-​            -c basic (-r | -b)  -clear        run ssd1681 clear screen function. 
+6. Run ssd1681 deinit function.
 
-​            -c basic (-r | -b)  -writepoint <x> <y> <data>        run ssd1681 writepoint function. 
+   ```shell
+   ssd1681 (-e basic-deinit | --example=basic-deinit)
+   ```
 
-​            -c basic (-r | -b)  -readpoint <x> <y>        run ssd1681 readpoint function.
+7. Run ssd1681 show string function, string is the shown string. 
 
-​            -c basic (-r | -b)  -rect <x1> <y1> <x2> <y2>        run ssd1681 drawing rectangle function. x1 means x start. y1 means y start. x2 means x end. y2 means y end.
+   ```shell
+   ssd1681 (-e basic-str | --example=basic-str) [--str=<string>] [--mode=<RED | BLACK>] [--color=<0 | 1>]
+   ```
+
+8. Run ssd1681 clear screen function.
+
+   ```shell
+   ssd1681 (-e basic-clear | --example=basic-clear) [--mode=<RED | BLACK>]
+   ```
+
+9. Run ssd1681 write point function, x0 is the x of the point and y0 is the y of the point.
+
+   ```shell
+   ssd1681 (-e basic-point | --example=basic-point) --x0=<x0> --y0=<y0> [--mode=<RED | BLACK>] [--color=<0 | 1>]
+   ```
+
+10. Run ssd1681 read point function, x0 is the x of the point and y0 is the y of the point.
+
+    ```shell
+    ssd1681 (-e basic-point | --example=basic-point) --x0=<x0> --y0=<y0> [--mode=<RED | BLACK>]
+    ```
+
+11. Run ssd1681 drawing rectangle function, x1 is the top left x of the rect, y1 is the top left y of the rect, x2 is the bottom right x of the rect and y2 is the bottom right y of the rect.
+
+    ```shell
+    ssd1681 (-e basic-rect | --example=basic-rect) --x1=<x1> --y1=<y1> --x2=<x2> --y2=<y2> [--mode=<RED | BLACK>] [--color=<0 | 1>]
+    ```
 
 #### 3.2 Command Example
 
@@ -82,7 +132,7 @@ ssd1681: SPI interface MISO connected to GPIOA PIN6.
 ssd1681: SPI interface MOSI connected to GPIOA PIN7.
 ssd1681: SPI interface CS connected to GPIOA PIN4.
 ssd1681: cmd data gpio GPIO connected to GPIOB PIN1.
-ssd1681: reset GPIO connected to GPIOB PIN0.
+ssd1681: reset GPIO connected to GPIOA PIN0.
 ssd1681: busy GPIO connected to GPIOA PIN8.
 ```
 
@@ -117,43 +167,43 @@ ssd1681: finish display test.
 ```
 
 ```shell
-ssd1681 -c basic -b -str 12345abcdEFGH!@#$<>?{}[];<>
+ssd1681 -e basic-str --str=12345abcdEFGH!@#$<>?{}[];<> --mode=BLACK --color=1
 
 ssd1681: 12345abcdEFGH!@#$<>?{}[];<>.
 ```
 
 ```shell
-ssd1681 -c basic -init 
+ssd1681 -e basic-init
 
 ssd1681: init success.
 ```
 
 ```shell
-ssd1681 -c basic -deinit
+ssd1681 -e basic-deinit
 
 ssd1681: deinit success.
 ```
 
 ```shell
-ssd1681 -c basic -b -clear 
+ssd1681 -e basic-clear --mode=BLACK
 
 ssd1681: clear success.
 ```
 
 ```shell
-ssd1681 -c basic -b -writepoint 16 16 1
+ssd1681 -e basic-point --x0=16 --y0=16 --mode=BLACK --color=1
 
 ssd1681: write point 16 16 1.
 ```
 
 ```shell
-ssd1681 -c basic -b -readpoint 16 16
+ssd1681 -e basic-point --x0=16 --y0=16 --mode=BLACK 
 
 ssd1681: read point 16 16 1.
 ```
 
 ```shell
-ssd1681 -c basic -b -rect 0 0 32 32
+ssd1681 -e basic-rect --x1=0 --y1=0 --x2=32 --y2=32 --mode=BLACK --color=1
 
 ssd1681: write rect 0 0 32 32.
 ```
@@ -161,27 +211,36 @@ ssd1681: write rect 0 0 32 32.
 ```shell
 ssd1681 -h
 
-ssd1681 -i
-	show ssd1681 chip and driver information.
-ssd1681 -h
-	show ssd1681 help.
-ssd1681 -p
-	show ssd1681 pin connections of the current board.
-ssd1681 -t display
-	run ssd1681 display test.
-ssd1681 -c basic -init
-	run ssd1681 init function.
-ssd1681 -c basic -deinit
-	run ssd1681 deinit function.
-ssd1681 -c basic (-r | -b) -str <string>
-	run ssd1681 show string function.string is the shown string.
-ssd1681 -c basic (-r | -b) -clear
-	run ssd1681 clear screen function.
-ssd1681 -c basic (-r | -b) -writepoint <x> <y> <data>
-	run ssd1681 writepoint function.
-ssd1681 -c basic (-r | -b) -readpoint <x> <y>
-	run ssd1681 readpoint function.
-ssd1681 -c basic (-r | -b) -rect <x1> <y1> <x2> <y2>
-	run ssd1681 drawing rectangle function.x1 means x start.y1 means y start.x2 means x end.y2 means y end.
+Usage:
+  ssd1681 (-i | --information)
+  ssd1681 (-h | --help)
+  ssd1681 (-p | --port)
+  ssd1681 (-t display | --test=display)
+  ssd1681 (-e basic-init | --example=basic-init)
+  ssd1681 (-e basic-deinit | --example=basic-deinit)
+  ssd1681 (-e basic-str | --example=basic-str) [--str=<string>] [--mode=<RED | BLACK>] [--color=<0 | 1>]
+  ssd1681 (-e basic-clear | --example=basic-clear) [--mode=<RED | BLACK>]
+  ssd1681 (-e basic-point | --example=basic-point) --x0=<x0> --y0=<y0> [--mode=<RED | BLACK>] [--color=<0 | 1>]
+  ssd1681 (-e basic-rect | --example=basic-rect) --x1=<x1> --y1=<y1> --x2=<x2> --y2=<y2> [--mode=<RED | BLACK>] [--color=<0 | 1>]
+
+Options:
+      --color=<0 | 1>     Set the chip color.([default: 1])
+  -e <basic-init | basic-deinit | basic-str | basic-clear | basic-point | basic-rect>, --example=
+     <basic-init | basic-deinit | basic-str | basic-clear | basic-point | basic-rect>
+                          Run the driver example.
+  -h, --help              Show the help.
+  -i, --information       Show the chip information.
+      --mode=<RED | BLACK>
+                          Set the chip display mode.([default: BLACK])
+  -p, --port              Display the pin connections of the current board.
+      --str=<string>      Set the display string.([default: libdriver])
+  -t <display>, --test=<display>
+                          Run the driver test.
+      --x0=<x0>           Set the x0 and it is the x of the point.
+      --x1=<x1>           Set the x1 and it is the top left x of the rect.
+      --x2=<x2>           Set the x2 and it is the bottom right x of the rect.
+      --y0=<y0>           Set the y0 and it is the y of the point.
+      --y1=<y1>           Set the y1 and it is the top left y of the rect.
+      --y2=<y2>           Set the y2 and it is the bottom right y of the rect.
 ```
 
