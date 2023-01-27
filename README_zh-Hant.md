@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver SSD1681
@@ -52,7 +52,7 @@ LibDriver SSD1681是LibDriver推出的SSD1681全功能驅動，該驅動提供�
 圖像提取格式如下，每個像素使用1個字節存儲。
 
 <div align=center>
-<img src="/doc/image/image_format.png"/>
+<img src="/doc/image/image_format.svg" width="220" height="220"/>
 </div>
 
 ```C
@@ -147,13 +147,13 @@ return 0;
 
 ### 文檔
 
-在線文檔: https://www.libdriver.com/docs/ssd1681/index.html
+在線文檔: [https://www.libdriver.com/docs/ssd1681/index.html](https://www.libdriver.com/docs/ssd1681/index.html)。
 
-離線文檔: /doc/html/index.html
+離線文檔: /doc/html/index.html。
 
 ### 貢獻
 
-請聯繫lishifenging@outlook.com
+請參攷CONTRIBUTING.md。
 
 ### 版權
 
@@ -169,4 +169,4 @@ MIT 許可證（MIT）
 
 ### 聯繫我們
 
-請聯繫lishifenging@outlook.com
+請聯繫lishifenging@outlook.com。
