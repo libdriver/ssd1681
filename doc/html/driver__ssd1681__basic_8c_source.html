@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="group__ssd1681__example__driver.html#ga45578e5e0082475799e9def0dd931a3f">   68</a></span>&#160;uint8_t <a class="code" href="group__ssd1681__example__driver.html#ga45578e5e0082475799e9def0dd931a3f">ssd1681_basic_init</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    uint8_t res;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/* link functions */</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="group__ssd1681__link__driver.html#gac0d731cdec1a547faf8b6bd9fa9ee223">DRIVER_SSD1681_LINK_INIT</a>(&amp;gs_handle, <a class="code" href="structssd1681__handle__s.html">ssd1681_handle_t</a>);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="group__ssd1681__link__driver.html#ga7fb328573fb7c1e8600775b3fd4a8c27">DRIVER_SSD1681_LINK_SPI_INIT</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__interface__driver.html#ga7fcf5bad9a6cb639ecc6aec95b8fcab3">ssd1681_interface_spi_init</a>);</div>
@@ -134,26 +134,26 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="group__ssd1681__link__driver.html#gae6e9db430be71e54054adf08302fc576">DRIVER_SSD1681_LINK_BUSY_GPIO_READ</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__interface__driver.html#gad073b440d43d557b340f978a1280050e">ssd1681_interface_busy_gpio_read</a>);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="group__ssd1681__link__driver.html#gafb76df0fbf558929a9cbde98cba81545">DRIVER_SSD1681_LINK_DELAY_MS</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__interface__driver.html#gabe57ce0ee0512816dd870d7794183b05">ssd1681_interface_delay_ms</a>);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="group__ssd1681__link__driver.html#ga0ed3c06e5c1bf82a5ec549045235ba9e">DRIVER_SSD1681_LINK_DEBUG_PRINT</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">/* init */</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga0ddf061744012e0bc6199ea3b1b1caaa">ssd1681_init</a>(&amp;gs_handle);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: init failed.\n&quot;</span>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;       </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">/* reset the chip */</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga6800ac7cf42c2e4ec9959b9b32774843">ssd1681_software_reset</a>(&amp;gs_handle);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: software reset failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;       </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">/* set the default driver output */</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga37b42018b07318ac8bbaa71fff8e7527">ssd1681_set_driver_output</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#gacfe8fa3b294a720cf9c7789687dc252a">SSD1681_BASIC_DEFAULT_DRIVER_OUTPUT_MUX</a>,</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                    <a class="code" href="group__ssd1681__example__driver.html#ga24b3c9304c88a977ebabeebc5676ce3f">SSD1681_BASIC_DEFAULT_DRIVER_OUTPUT_GD</a>,</div>
@@ -163,17 +163,17 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    {</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set the driver output failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;       </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">/* set the default data entry mode */</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gac41a0723e2137d8eb9ac4a761c2c0d21">ssd1681_set_data_entry_mode</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#gaac23e9df2d650cd121cee6fae39937ed">SSD1681_BASIC_DEFAULT_ADDRESS_MODE</a>, <a class="code" href="group__ssd1681__example__driver.html#gafa09296a4e88d7522bebf778c3b525fa">SSD1681_BASIC_DEFAULT_ADDRESS_DIRECTION</a>);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    {</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set data entry mode failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;       </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
@@ -183,10 +183,10 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set temperature sensor failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;       </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="comment">/* set the default border waveform */</span></div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gade1f9ffdbe9d563981afbe3d266b26c8">ssd1681_set_border_waveform</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#gae13b2486e43d3730856d47f1786a2441">SSD1681_BASIC_DEFAULT_VBD</a>, <a class="code" href="group__ssd1681__example__driver.html#ga255bd94bcadbd4bd9e4756a4ad4ea2bb">SSD1681_BASIC_DEFAULT_VBD_FIX_LEVEL</a>,</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                                      <a class="code" href="group__ssd1681__example__driver.html#ga82f5ced999b366ece6cad1f49f3ccb47">SSD1681_BASIC_DEFAULT_GS_TRANSITION</a>, <a class="code" href="group__ssd1681__example__driver.html#ga361d0fa79ffed0633e7c5deadc92e8dc">SSD1681_BASIC_DEFAULT_VBD_TRANSITION</a>);</div>
@@ -194,234 +194,234 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set border waveform failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;       </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">/* set the default x range */</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gad0495a83b4aef81735e032db8c8649d8">ssd1681_set_ram_x</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga8c5ba2067af78ec85fde748b61503519">SSD1681_BASIC_DEFAULT_RAM_X_START</a>, <a class="code" href="group__ssd1681__example__driver.html#ga0f3d69b3cc80abeba7fdb92541d24660">SSD1681_BASIC_DEFAULT_RAM_X_END</a>);</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set ram x failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;       </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">/* set the default y range */</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga6403b6c0017feb0710ca4d64fc1db85e">ssd1681_set_ram_y</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#gac0ba6e128ee665d75fb460248e8e3399">SSD1681_BASIC_DEFAULT_RAM_Y_START</a>, <a class="code" href="group__ssd1681__example__driver.html#ga257fefaa90c2d80eed1a14c5feb9af0f">SSD1681_BASIC_DEFAULT_RAM_Y_END</a>);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    {</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set ram y failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;       </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">/* set the default ram x address counter */</span></div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga83bbcc284c0e91523661c4751479bf23">ssd1681_set_ram_x_address_counter</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga8d5ca0eac3a830478f73f3bf4047927d">SSD1681_BASIC_DEFAULT_RAM_X_ADDRESS_COUNTER</a>);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set ram x address counter failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;       </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">/* set the default ram y address counter */</span></div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga13404579510df0817687f2566f513678">ssd1681_set_ram_y_address_counter</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#gabe3ceafb4d1803e60c9a8ac151516f35">SSD1681_BASIC_DEFAULT_RAM_Y_ADDRESS_COUNTER</a>);</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set ram y address counter failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;       </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">/* set the default display update control mode */</span></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga586ad903998e00c2a80e585a976cb8f8">ssd1681_set_display_update_control</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga8859114fb6682245a2c864bb44a0e8f7">SSD1681_BASIC_DEFAULT_DISPLAY_CONTROL_RED</a>, <a class="code" href="group__ssd1681__example__driver.html#ga56a7796e43c8316606d4e3401a436a7b">SSD1681_BASIC_DEFAULT_DISPLAY_CONTROL_BLACK</a>);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set display update control failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;       </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="comment">/* set the default sequence */</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga098771d255050c4ea54d43095701721e">ssd1681_set_display_sequence</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga13596f8ba1b75c32eca34be4ca353800">SSD1681_BASIC_DEFAULT_DISPLAY_SEQUENCE</a>);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set display sequence failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;       </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">/* set the default vcom sense duration */</span></div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga1c8169053cf6f20cfc18415edde025f0">ssd1681_set_vcom_sense_duration</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga5c2eb14477ff4bbea4536b0afd9e84b2">SSD1681_BASIC_DEFAULT_VCOM_SENSE_DURATION</a>);</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    {</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set vcom sense duration failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;       </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">/* enter the vcom sense */</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gaa378e6883388cde020007df97d704b41">ssd1681_set_enter_vcom_sense</a>(&amp;gs_handle);</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set enter vcom sense failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;       </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">/* set the vcom control reg */</span></div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga345700cb2e1892b1b5d919f334534862">ssd1681_set_vcom_control_reg</a>(&amp;gs_handle);</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    {</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set vcom control reg failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;       </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    }</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">/* set the lut register */</span></div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga13a17040ea5b173a75fe80333beca242">ssd1681_set_lut_register</a>(&amp;gs_handle, gs_lut, 153);</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    {</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set lut register failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;       </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">/* set the default end option */</span></div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga62ce084b0f5a8d15b945dee7ab4fb5d7">ssd1681_set_end_option</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga71f2a12b0680efaf6d1b52dee83f03f8">SSD1681_BASIC_DEFAULT_END_OPT</a>);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    {</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set end option failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;       </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">/* set the default gate driving voltage */</span></div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga79f01f2fff321d4d9e7675a25642d118">ssd1681_set_gate_driving_voltage</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga296865c0eec53d250fd09012e3b9a239">SSD1681_BASIC_DEFAULT_GATE_DRIVING_VOLTAGE</a>);</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    {</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set gate driving voltage failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;       </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="comment">/* set the default source driving voltage */</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gab2cc5c6e66bb0a541e4c8f82e3cef8f8">ssd1681_set_source_driving_voltage</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga17a498906f0d6fcdd16ae502360e5f6f">SSD1681_BASIC_DEFAULT_VSH1</a>, <a class="code" href="group__ssd1681__example__driver.html#ga4d800282a1e348567e766a1e2c21d8a5">SSD1681_BASIC_DEFAULT_VSH2</a>, <a class="code" href="group__ssd1681__example__driver.html#gaac10baa0f22e5960911bd8867210dd6d">SSD1681_BASIC_DEFAULT_VSL</a>);</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    {</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set source driving voltage failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;       </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">/* set the default vcom */</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gac36c77ad11487d9752d96b46f659e661">ssd1681_set_vcom_register</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__base__driver.html#ggaae6451d079a124fbfb995c79df17dfaba9f8dd1ea90365ca8c096779a8c9d2354">SSD1681_VCOM_NEGTIVE_0P8</a>);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gac36c77ad11487d9752d96b46f659e661">ssd1681_set_vcom_register</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__base__driver.html#ggaae6451d079a124fbfb995c79df17dfabacb5c2801888995a39015c982ce26b7b1">SSD1681_VCOM_NEGATIVE_0P8</a>);</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    {</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set vcom register failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;       </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="comment">/* set the default auto write red ram */</span></div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga95cea706e4ca043fc89e5cb4eb3ce923">ssd1681_set_auto_write_red_ram</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga453a8ff51c4cb38488ae49c7e6b6a455">SSD1681_BASIC_DEFAULT_AUTO_RED_STEP_HEIGHT</a>, <a class="code" href="group__ssd1681__example__driver.html#gae3ddbfc1d99c817573665ca062f2bda4">SSD1681_BASIC_DEFAULT_AUTO_RED_STEP_WIDTH</a>);</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    {</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set auto write red ram failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;       </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="comment">/* set the default auto write black ram */</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga8e311cca46ecfe3d33bbaee9771107b3">ssd1681_set_auto_write_black_ram</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga426f8b7b1e3883189c6545912fbb2e81">SSD1681_BASIC_DEFAULT_AUTO_BLACK_STEP_HEIGHT</a>, <a class="code" href="group__ssd1681__example__driver.html#gaebb42bb2461fb003ffa4aeb0a22f039c">SSD1681_BASIC_DEFAULT_AUTO_BLACK_STEP_WIDTH</a>);</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    {</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set auto write black ram failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;       </div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="comment">/* set the default hv ready detection */</span></div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga7cbfd176f91783f338f08ff449fcc7f1">ssd1681_set_hv_ready_detection</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga978a7940f0ab18b1e9ca65fdab3a960a">SSD1681_BASIC_DEFAULT_COOL_DOWN_DURATION</a>, <a class="code" href="group__ssd1681__example__driver.html#ga159e1efcfeaf7a5ba8df7dd25dd2d3be">SSD1681_BASIC_DEFAULT_COOL_DOWN_LOOP_NUM</a>);</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    {</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set hv ready detection failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;       </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="comment">/* set the default vci detection */</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gadea7141100173a49f228ba9bf1bce6cb">ssd1681_set_vci_detection</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga2323ba82aff62903acf4001568bd983f">SSD1681_BASIC_DEFAULT_VCI</a>);</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    {</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set vci detection failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;       </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="comment">/* set the default booster soft start param */</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gab0ef7ac47ef1025cb48a46b0b5cbcacd">ssd1681_set_booster_soft_start</a>(&amp;gs_handle, </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#gab0ef7ac47ef1025cb48a46b0b5cbcacd">ssd1681_set_booster_soft_start</a>(&amp;gs_handle,</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                                        (uint8_t)(<a class="code" href="group__ssd1681__example__driver.html#gab27c269b98087e6f49e9ff412b2a6b0e">SSD1681_BASIC_DEFAULT_PHASE1</a>),</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                                        (uint8_t)(<a class="code" href="group__ssd1681__example__driver.html#gaa769915935901e49779a6a12b8d3ace1">SSD1681_BASIC_DEFAULT_PHASE2</a>),</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                                        (uint8_t)(<a class="code" href="group__ssd1681__example__driver.html#gaa4385ddb09eccf07e0d9ec6b3b54d6f4">SSD1681_BASIC_DEFAULT_PHASE3</a>), </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                                        (uint8_t)(<a class="code" href="group__ssd1681__example__driver.html#gaa4385ddb09eccf07e0d9ec6b3b54d6f4">SSD1681_BASIC_DEFAULT_PHASE3</a>),</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                                        (uint8_t)(<a class="code" href="group__ssd1681__example__driver.html#ga3b12383b2b57ec058ae445d54bbea246">SSD1681_BASIC_DEFAULT_DURATION</a>));</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    {</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set booster soft start failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;       </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    }</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="comment">/* set the default mode */</span></div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga78d36abd570c23207deec4d3ee001037">ssd1681_set_mode</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__example__driver.html#ga55795696b91ce31765039bbc6010f12f">SSD1681_BASIC_DEFAULT_MODE</a>);</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    {</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: set mode failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;       </div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="comment">/* clear the black */</span></div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga4392edcbd331d7baa7a853f5317256dc">ssd1681_gram_clear</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__base__driver.html#gga34fb00bd33b7d210ece738dcab095714a9da0a86adc1d17b412cf806877c53782">SSD1681_COLOR_BLACK</a>);</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    {</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: clear failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;       </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    </div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="comment">/* clear the red */</span></div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga4392edcbd331d7baa7a853f5317256dc">ssd1681_gram_clear</a>(&amp;gs_handle, <a class="code" href="group__ssd1681__base__driver.html#gga34fb00bd33b7d210ece738dcab095714a18b52847559deedb8e7893d45d20e854">SSD1681_COLOR_RED</a>);</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    {</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <a class="code" href="group__ssd1681__interface__driver.html#gadf2741fff58c6f69996d76f18459befd">ssd1681_interface_debug_print</a>(<span class="stringliteral">&quot;ssd1681: clear failed.\n&quot;</span>);</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        (void)<a class="code" href="group__ssd1681__base__driver.html#ga0744a4c9d9d103860bb5c35628c442f8">ssd1681_deinit</a>(&amp;gs_handle);</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;       </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    }</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;}</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
@@ -454,14 +454,14 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="line"><a name="l00432"></a><span class="lineno"><a class="line" href="group__ssd1681__example__driver.html#ga7e25e5cafe6d8b58af59b97a12402e7f">  432</a></span>&#160;uint8_t <a class="code" href="group__ssd1681__example__driver.html#ga7e25e5cafe6d8b58af59b97a12402e7f">ssd1681_basic_write_point</a>(<a class="code" href="group__ssd1681__base__driver.html#ga34fb00bd33b7d210ece738dcab095714">ssd1681_color_t</a> color, uint8_t x, uint8_t y, uint8_t data)</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;{</div>
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    uint8_t res;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    <span class="comment">/* write point */</span></div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga9fb024697bc0865652bdc71fb3a9a0bd">ssd1681_gram_write_point</a>(&amp;gs_handle, color, x, y, data);</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    {</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    }</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    </div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="comment">/* update gram */</span></div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group__ssd1681__base__driver.html#gadfd231d5cb003604f65e43d913957329">ssd1681_gram_update</a>(&amp;gs_handle, color) != 0)</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    {</div>
@@ -476,28 +476,28 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="line"><a name="l00465"></a><span class="lineno"><a class="line" href="group__ssd1681__example__driver.html#ga365cfaffba6e9447aca206819fd05a08">  465</a></span>&#160;uint8_t <a class="code" href="group__ssd1681__example__driver.html#ga365cfaffba6e9447aca206819fd05a08">ssd1681_basic_read_point</a>(<a class="code" href="group__ssd1681__base__driver.html#ga34fb00bd33b7d210ece738dcab095714">ssd1681_color_t</a> color, uint8_t x, uint8_t y, uint8_t *data)</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;{</div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;    uint8_t res;</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160; </div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="comment">/* read point in gram */</span></div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga5e39eefc3379fadb7fecb9564a49c9a9">ssd1681_gram_read_point</a>(&amp;gs_handle, color, x, y, data);</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    {</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    }</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;    </div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;}</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160; </div>
 <div class="line"><a name="l00493"></a><span class="lineno"><a class="line" href="group__ssd1681__example__driver.html#ga8de464c23c0b08dbe2de63361710f5c5">  493</a></span>&#160;uint8_t <a class="code" href="group__ssd1681__example__driver.html#ga8de464c23c0b08dbe2de63361710f5c5">ssd1681_basic_string</a>(<a class="code" href="group__ssd1681__base__driver.html#ga34fb00bd33b7d210ece738dcab095714">ssd1681_color_t</a> color, uint8_t x, uint8_t y, <span class="keywordtype">char</span> *str, uint16_t len, uint8_t data, <a class="code" href="group__ssd1681__base__driver.html#ga7238fc6793e7da0ba2c818799cc8fb5f">ssd1681_font_t</a> font)</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;{</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    uint8_t res;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    </div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="comment">/* write stirng in gram */</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="comment">/* write string in gram */</span></div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga431f7e9fbf312981c41f002bb4c904fd">ssd1681_gram_write_string</a>(&amp;gs_handle, color, x, y, str, len, data, font);</div>
 <div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    {</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    }</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    </div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160; </div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="comment">/* update gram */</span></div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group__ssd1681__base__driver.html#gadfd231d5cb003604f65e43d913957329">ssd1681_gram_update</a>(&amp;gs_handle, color) != 0)</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    {</div>
@@ -512,14 +512,14 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="line"><a name="l00528"></a><span class="lineno"><a class="line" href="group__ssd1681__example__driver.html#ga3f43bbc0f38651fb7c9ee34f90bb2339">  528</a></span>&#160;uint8_t <a class="code" href="group__ssd1681__example__driver.html#ga3f43bbc0f38651fb7c9ee34f90bb2339">ssd1681_basic_rect</a>(<a class="code" href="group__ssd1681__base__driver.html#ga34fb00bd33b7d210ece738dcab095714">ssd1681_color_t</a> color, uint8_t left, uint8_t top, uint8_t right, uint8_t bottom, uint8_t data)</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;{</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    uint8_t res;</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    </div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160; </div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    <span class="comment">/* fill rect in gram */</span></div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga5659dc76ad296db556aea63ac1773d4e">ssd1681_gram_fill_rect</a>(&amp;gs_handle, color, left, top, right, bottom, data);</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    {</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    }</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    </div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160; </div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    <span class="comment">/* update gram */</span></div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group__ssd1681__base__driver.html#gadfd231d5cb003604f65e43d913957329">ssd1681_gram_update</a>(&amp;gs_handle, color) != 0)</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    {</div>
@@ -534,14 +534,14 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="line"><a name="l00563"></a><span class="lineno"><a class="line" href="group__ssd1681__example__driver.html#ga597b794225bb2bd96066078a29259f22">  563</a></span>&#160;uint8_t <a class="code" href="group__ssd1681__example__driver.html#ga597b794225bb2bd96066078a29259f22">ssd1681_basic_picture</a>(<a class="code" href="group__ssd1681__base__driver.html#ga34fb00bd33b7d210ece738dcab095714">ssd1681_color_t</a> color, uint8_t left, uint8_t top, uint8_t right, uint8_t bottom, uint8_t *img)</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;{</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    uint8_t res;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    </div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160; </div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="comment">/* draw picture in gram */</span></div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    res = <a class="code" href="group__ssd1681__base__driver.html#ga39bb7ab93dbbed7aff2f2fd60185d9a7">ssd1681_gram_draw_picture</a>(&amp;gs_handle, color, left, top, right, bottom, img);</div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    <span class="keywordflow">if</span> (res != 0)</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    {</div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    }</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    </div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160; </div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <span class="comment">/* update gram */</span></div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group__ssd1681__base__driver.html#gadfd231d5cb003604f65e43d913957329">ssd1681_gram_update</a>(&amp;gs_handle, color) != 0)</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    {</div>
@@ -592,7 +592,7 @@ $(document).ready(function(){initNavTree('driver__ssd1681__basic_8c_source.html'
 <div class="ttc" id="agroup__ssd1681__base__driver_html_gadfd231d5cb003604f65e43d913957329"><div class="ttname"><a href="group__ssd1681__base__driver.html#gadfd231d5cb003604f65e43d913957329">ssd1681_gram_update</a></div><div class="ttdeci">uint8_t ssd1681_gram_update(ssd1681_handle_t *handle, ssd1681_color_t color)</div><div class="ttdoc">update the gram data</div><div class="ttdef"><b>Definition:</b> <a href="driver__ssd1681_8c_source.html#l02367">driver_ssd1681.c:2367</a></div></div>
 <div class="ttc" id="agroup__ssd1681__base__driver_html_gga34fb00bd33b7d210ece738dcab095714a18b52847559deedb8e7893d45d20e854"><div class="ttname"><a href="group__ssd1681__base__driver.html#gga34fb00bd33b7d210ece738dcab095714a18b52847559deedb8e7893d45d20e854">SSD1681_COLOR_RED</a></div><div class="ttdeci">@ SSD1681_COLOR_RED</div><div class="ttdef"><b>Definition:</b> <a href="driver__ssd1681_8h_source.html#l00517">driver_ssd1681.h:517</a></div></div>
 <div class="ttc" id="agroup__ssd1681__base__driver_html_gga34fb00bd33b7d210ece738dcab095714a9da0a86adc1d17b412cf806877c53782"><div class="ttname"><a href="group__ssd1681__base__driver.html#gga34fb00bd33b7d210ece738dcab095714a9da0a86adc1d17b412cf806877c53782">SSD1681_COLOR_BLACK</a></div><div class="ttdeci">@ SSD1681_COLOR_BLACK</div><div class="ttdef"><b>Definition:</b> <a href="driver__ssd1681_8h_source.html#l00516">driver_ssd1681.h:516</a></div></div>
-<div class="ttc" id="agroup__ssd1681__base__driver_html_ggaae6451d079a124fbfb995c79df17dfaba9f8dd1ea90365ca8c096779a8c9d2354"><div class="ttname"><a href="group__ssd1681__base__driver.html#ggaae6451d079a124fbfb995c79df17dfaba9f8dd1ea90365ca8c096779a8c9d2354">SSD1681_VCOM_NEGTIVE_0P8</a></div><div class="ttdeci">@ SSD1681_VCOM_NEGTIVE_0P8</div><div class="ttdef"><b>Definition:</b> <a href="driver__ssd1681_8h_source.html#l00391">driver_ssd1681.h:391</a></div></div>
+<div class="ttc" id="agroup__ssd1681__base__driver_html_ggaae6451d079a124fbfb995c79df17dfabacb5c2801888995a39015c982ce26b7b1"><div class="ttname"><a href="group__ssd1681__base__driver.html#ggaae6451d079a124fbfb995c79df17dfabacb5c2801888995a39015c982ce26b7b1">SSD1681_VCOM_NEGATIVE_0P8</a></div><div class="ttdeci">@ SSD1681_VCOM_NEGATIVE_0P8</div><div class="ttdef"><b>Definition:</b> <a href="driver__ssd1681_8h_source.html#l00391">driver_ssd1681.h:391</a></div></div>
 <div class="ttc" id="agroup__ssd1681__example__driver_html_ga0f3d69b3cc80abeba7fdb92541d24660"><div class="ttname"><a href="group__ssd1681__example__driver.html#ga0f3d69b3cc80abeba7fdb92541d24660">SSD1681_BASIC_DEFAULT_RAM_X_END</a></div><div class="ttdeci">#define SSD1681_BASIC_DEFAULT_RAM_X_END</div><div class="ttdef"><b>Definition:</b> <a href="driver__ssd1681__basic_8h_source.html#l00068">driver_ssd1681_basic.h:68</a></div></div>
 <div class="ttc" id="agroup__ssd1681__example__driver_html_ga10f8d9fc931020891555bb168250adfb"><div class="ttname"><a href="group__ssd1681__example__driver.html#ga10f8d9fc931020891555bb168250adfb">SSD1681_BASIC_DEFAULT_DRIVER_OUTPUT_SM</a></div><div class="ttdeci">#define SSD1681_BASIC_DEFAULT_DRIVER_OUTPUT_SM</div><div class="ttdef"><b>Definition:</b> <a href="driver__ssd1681__basic_8h_source.html#l00058">driver_ssd1681_basic.h:58</a></div></div>
 <div class="ttc" id="agroup__ssd1681__example__driver_html_ga13596f8ba1b75c32eca34be4ca353800"><div class="ttname"><a href="group__ssd1681__example__driver.html#ga13596f8ba1b75c32eca34be4ca353800">SSD1681_BASIC_DEFAULT_DISPLAY_SEQUENCE</a></div><div class="ttdeci">#define SSD1681_BASIC_DEFAULT_DISPLAY_SEQUENCE</div><div class="ttdef"><b>Definition:</b> <a href="driver__ssd1681__basic_8h_source.html#l00075">driver_ssd1681_basic.h:75</a></div></div>

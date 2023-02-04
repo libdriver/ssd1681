@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2015 - present LibDriver All rights reserved
- * 
+ *
  * The MIT License (MIT)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,7 +19,7 @@
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE. 
+ * SOFTWARE.
  *
  * @file      driver_ssd1681_basic.h
  * @brief     driver ssd1681 basic header file
@@ -60,7 +60,7 @@ extern "C"{
 #define SSD1681_BASIC_DEFAULT_ADDRESS_MODE                  SSD1681_ADDRESS_MODE_Y_DECREMENT_X_INCREMENT                   /**< y decrement and x increment */
 #define SSD1681_BASIC_DEFAULT_ADDRESS_DIRECTION             SSD1681_ADDRESS_DIRECTION_UPDATED_X                            /**< update x */
 #define SSD1681_BASIC_DEFAULT_TEMPERATURE_SENSOR            SSD1681_TEMPERATURE_SENSOR_INTERNAL                            /**< internal sensor */
-#define SSD1681_BASIC_DEFAULT_VBD                           SSD1681_VBD_GS_TRANSITION                                      /**< vbd gs transiton */
+#define SSD1681_BASIC_DEFAULT_VBD                           SSD1681_VBD_GS_TRANSITION                                      /**< vbd gs transition */
 #define SSD1681_BASIC_DEFAULT_VBD_FIX_LEVEL                 SSD1681_VBD_FIX_LEVEL_VSS                                      /**< vbd fix level vss */
 #define SSD1681_BASIC_DEFAULT_GS_TRANSITION                 SSD1681_GS_TRANSITION_FOLLOW_LUT                               /**< gs transition follow lut */
 #define SSD1681_BASIC_DEFAULT_VBD_TRANSITION                SSD1681_VBD_TRANSITION_LUT1                                    /**< vbd transition lut1 */
@@ -78,8 +78,8 @@ extern "C"{
 #define SSD1681_BASIC_DEFAULT_GATE_DRIVING_VOLTAGE          SSD1681_GATE_DRIVING_VOLTAGE_20V                               /**< 20V */
 #define SSD1681_BASIC_DEFAULT_VSH1                          SSD1681_VSH_15V                                                /**< 15V */
 #define SSD1681_BASIC_DEFAULT_VSH2                          SSD1681_VSH_5V                                                 /**< 5V */
-#define SSD1681_BASIC_DEFAULT_VSL                           SSD1681_VSL_NEGTIVE_15                                         /**< -15V */
-#define SSD1681_BASIC_DEFAULT_VCOM                          SSD1681_VCOM_NEGTIVE_0P8                                       /**< -0.8V */
+#define SSD1681_BASIC_DEFAULT_VSL                           SSD1681_VSL_NEGATIVE_15                                        /**< -15V */
+#define SSD1681_BASIC_DEFAULT_VCOM                          SSD1681_VCOM_NEGATIVE_0P8                                      /**< -0.8V */
 #define SSD1681_BASIC_DEFAULT_AUTO_RED_STEP_HEIGHT          SSD1681_STEP_HEIGHT_200                                        /**< 200 */
 #define SSD1681_BASIC_DEFAULT_AUTO_RED_STEP_WIDTH           SSD1681_STEP_WIDTH_200                                         /**< 200 */
 #define SSD1681_BASIC_DEFAULT_AUTO_BLACK_STEP_HEIGHT        SSD1681_STEP_HEIGHT_200                                        /**< 200 */

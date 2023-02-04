@@ -225,31 +225,31 @@ typedef enum
  */
 typedef enum  
 {
-    SSD1681_VSL_NEGTIVE_5    = 0x0A,        /**< -5 */
-    SSD1681_VSL_NEGTIVE_5P5  = 0x0C,        /**< -5.5 */
-    SSD1681_VSL_NEGTIVE_6    = 0x0E,        /**< -6 */
-    SSD1681_VSL_NEGTIVE_6P5  = 0x10,        /**< -6.5 */
-    SSD1681_VSL_NEGTIVE_7    = 0x12,        /**< -7 */
-    SSD1681_VSL_NEGTIVE_7P5  = 0x14,        /**< -7.5 */
-    SSD1681_VSL_NEGTIVE_8    = 0x16,        /**< -8 */
-    SSD1681_VSL_NEGTIVE_8P5  = 0x18,        /**< -8.5 */
-    SSD1681_VSL_NEGTIVE_9    = 0x1A,        /**< -9 */
-    SSD1681_VSL_NEGTIVE_9P5  = 0x1C,        /**< -9.5 */
-    SSD1681_VSL_NEGTIVE_10   = 0x1E,        /**< -10 */
-    SSD1681_VSL_NEGTIVE_10P5 = 0x20,        /**< -10.5 */
-    SSD1681_VSL_NEGTIVE_11   = 0x22,        /**< -11 */
-    SSD1681_VSL_NEGTIVE_11P5 = 0x24,        /**< -11.5 */
-    SSD1681_VSL_NEGTIVE_12   = 0x26,        /**< -12 */
-    SSD1681_VSL_NEGTIVE_12P5 = 0x28,        /**< -12.5 */
-    SSD1681_VSL_NEGTIVE_13   = 0x2A,        /**< -13 */
-    SSD1681_VSL_NEGTIVE_13P5 = 0x2C,        /**< -13.5 */
-    SSD1681_VSL_NEGTIVE_14   = 0x2E,        /**< -14 */
-    SSD1681_VSL_NEGTIVE_14P5 = 0x30,        /**< -14.5 */
-    SSD1681_VSL_NEGTIVE_15   = 0x32,        /**< -15 */
-    SSD1681_VSL_NEGTIVE_15P5 = 0x34,        /**< -15.5 */
-    SSD1681_VSL_NEGTIVE_16   = 0x36,        /**< -16 */
-    SSD1681_VSL_NEGTIVE_16P5 = 0x38,        /**< -16.5 */
-    SSD1681_VSL_NEGTIVE_17   = 0x3A,        /**< -17 */
+    SSD1681_VSL_NEGATIVE_5    = 0x0A,        /**< -5 */
+    SSD1681_VSL_NEGATIVE_5P5  = 0x0C,        /**< -5.5 */
+    SSD1681_VSL_NEGATIVE_6    = 0x0E,        /**< -6 */
+    SSD1681_VSL_NEGATIVE_6P5  = 0x10,        /**< -6.5 */
+    SSD1681_VSL_NEGATIVE_7    = 0x12,        /**< -7 */
+    SSD1681_VSL_NEGATIVE_7P5  = 0x14,        /**< -7.5 */
+    SSD1681_VSL_NEGATIVE_8    = 0x16,        /**< -8 */
+    SSD1681_VSL_NEGATIVE_8P5  = 0x18,        /**< -8.5 */
+    SSD1681_VSL_NEGATIVE_9    = 0x1A,        /**< -9 */
+    SSD1681_VSL_NEGATIVE_9P5  = 0x1C,        /**< -9.5 */
+    SSD1681_VSL_NEGATIVE_10   = 0x1E,        /**< -10 */
+    SSD1681_VSL_NEGATIVE_10P5 = 0x20,        /**< -10.5 */
+    SSD1681_VSL_NEGATIVE_11   = 0x22,        /**< -11 */
+    SSD1681_VSL_NEGATIVE_11P5 = 0x24,        /**< -11.5 */
+    SSD1681_VSL_NEGATIVE_12   = 0x26,        /**< -12 */
+    SSD1681_VSL_NEGATIVE_12P5 = 0x28,        /**< -12.5 */
+    SSD1681_VSL_NEGATIVE_13   = 0x2A,        /**< -13 */
+    SSD1681_VSL_NEGATIVE_13P5 = 0x2C,        /**< -13.5 */
+    SSD1681_VSL_NEGATIVE_14   = 0x2E,        /**< -14 */
+    SSD1681_VSL_NEGATIVE_14P5 = 0x30,        /**< -14.5 */
+    SSD1681_VSL_NEGATIVE_15   = 0x32,        /**< -15 */
+    SSD1681_VSL_NEGATIVE_15P5 = 0x34,        /**< -15.5 */
+    SSD1681_VSL_NEGATIVE_16   = 0x36,        /**< -16 */
+    SSD1681_VSL_NEGATIVE_16P5 = 0x38,        /**< -16.5 */
+    SSD1681_VSL_NEGATIVE_17   = 0x3A,        /**< -17 */
 } ssd1681_vsl_t;
 
 /**
@@ -344,7 +344,7 @@ typedef enum
  */
 typedef enum  
 {
-    SSD1681_TEMPERATURE_SENSOR_EXTERNAL = 0x48,        /**< external temperatrure sensor */
+    SSD1681_TEMPERATURE_SENSOR_EXTERNAL = 0x48,        /**< external temperature sensor */
     SSD1681_TEMPERATURE_SENSOR_INTERNAL = 0x80,        /**< internal temperature sensor */
 } ssd1681_temperature_sensor_t;
 
@@ -382,35 +382,35 @@ typedef enum
  */
 typedef enum  
 {
-    SSD1681_VCOM_NEGTIVE_0P2 = 0x08,        /**< -0.2 */
-    SSD1681_VCOM_NEGTIVE_0P3 = 0x0C,        /**< -0.3 */
-    SSD1681_VCOM_NEGTIVE_0P4 = 0x10,        /**< -0.4 */
-    SSD1681_VCOM_NEGTIVE_0P5 = 0x14,        /**< -0.5 */
-    SSD1681_VCOM_NEGTIVE_0P6 = 0x18,        /**< -0.6 */
-    SSD1681_VCOM_NEGTIVE_0P7 = 0x1C,        /**< -0.7 */
-    SSD1681_VCOM_NEGTIVE_0P8 = 0x20,        /**< -0.8 */
-    SSD1681_VCOM_NEGTIVE_0P9 = 0x24,        /**< -0.9 */
-    SSD1681_VCOM_NEGTIVE_1P0 = 0x28,        /**< -1.0 */
-    SSD1681_VCOM_NEGTIVE_1P1 = 0x2C,        /**< -1.1 */
-    SSD1681_VCOM_NEGTIVE_1P2 = 0x30,        /**< -1.2 */
-    SSD1681_VCOM_NEGTIVE_1P3 = 0x34,        /**< -1.3 */
-    SSD1681_VCOM_NEGTIVE_1P4 = 0x38,        /**< -1.4 */
-    SSD1681_VCOM_NEGTIVE_1P5 = 0x3C,        /**< -1.5 */
-    SSD1681_VCOM_NEGTIVE_1P6 = 0x40,        /**< -1.6 */
-    SSD1681_VCOM_NEGTIVE_1P7 = 0x44,        /**< -1.7 */
-    SSD1681_VCOM_NEGTIVE_1P8 = 0x48,        /**< -1.8 */
-    SSD1681_VCOM_NEGTIVE_1P9 = 0x4C,        /**< -1.9 */
-    SSD1681_VCOM_NEGTIVE_2P0 = 0x50,        /**< -2.0 */
-    SSD1681_VCOM_NEGTIVE_2P1 = 0x54,        /**< -2.1 */
-    SSD1681_VCOM_NEGTIVE_2P2 = 0x58,        /**< -2.2 */
-    SSD1681_VCOM_NEGTIVE_2P3 = 0x5C,        /**< -2.3 */
-    SSD1681_VCOM_NEGTIVE_2P4 = 0x60,        /**< -2.4 */
-    SSD1681_VCOM_NEGTIVE_2P5 = 0x64,        /**< -2.5 */
-    SSD1681_VCOM_NEGTIVE_2P6 = 0x68,        /**< -2.6 */
-    SSD1681_VCOM_NEGTIVE_2P7 = 0x6C,        /**< -2.7 */
-    SSD1681_VCOM_NEGTIVE_2P8 = 0x70,        /**< -2.8 */
-    SSD1681_VCOM_NEGTIVE_2P9 = 0x74,        /**< -2.9 */
-    SSD1681_VCOM_NEGTIVE_3P0 = 0x78,        /**< -3.0 */
+    SSD1681_VCOM_NEGATIVE_0P2 = 0x08,        /**< -0.2 */
+    SSD1681_VCOM_NEGATIVE_0P3 = 0x0C,        /**< -0.3 */
+    SSD1681_VCOM_NEGATIVE_0P4 = 0x10,        /**< -0.4 */
+    SSD1681_VCOM_NEGATIVE_0P5 = 0x14,        /**< -0.5 */
+    SSD1681_VCOM_NEGATIVE_0P6 = 0x18,        /**< -0.6 */
+    SSD1681_VCOM_NEGATIVE_0P7 = 0x1C,        /**< -0.7 */
+    SSD1681_VCOM_NEGATIVE_0P8 = 0x20,        /**< -0.8 */
+    SSD1681_VCOM_NEGATIVE_0P9 = 0x24,        /**< -0.9 */
+    SSD1681_VCOM_NEGATIVE_1P0 = 0x28,        /**< -1.0 */
+    SSD1681_VCOM_NEGATIVE_1P1 = 0x2C,        /**< -1.1 */
+    SSD1681_VCOM_NEGATIVE_1P2 = 0x30,        /**< -1.2 */
+    SSD1681_VCOM_NEGATIVE_1P3 = 0x34,        /**< -1.3 */
+    SSD1681_VCOM_NEGATIVE_1P4 = 0x38,        /**< -1.4 */
+    SSD1681_VCOM_NEGATIVE_1P5 = 0x3C,        /**< -1.5 */
+    SSD1681_VCOM_NEGATIVE_1P6 = 0x40,        /**< -1.6 */
+    SSD1681_VCOM_NEGATIVE_1P7 = 0x44,        /**< -1.7 */
+    SSD1681_VCOM_NEGATIVE_1P8 = 0x48,        /**< -1.8 */
+    SSD1681_VCOM_NEGATIVE_1P9 = 0x4C,        /**< -1.9 */
+    SSD1681_VCOM_NEGATIVE_2P0 = 0x50,        /**< -2.0 */
+    SSD1681_VCOM_NEGATIVE_2P1 = 0x54,        /**< -2.1 */
+    SSD1681_VCOM_NEGATIVE_2P2 = 0x58,        /**< -2.2 */
+    SSD1681_VCOM_NEGATIVE_2P3 = 0x5C,        /**< -2.3 */
+    SSD1681_VCOM_NEGATIVE_2P4 = 0x60,        /**< -2.4 */
+    SSD1681_VCOM_NEGATIVE_2P5 = 0x64,        /**< -2.5 */
+    SSD1681_VCOM_NEGATIVE_2P6 = 0x68,        /**< -2.6 */
+    SSD1681_VCOM_NEGATIVE_2P7 = 0x6C,        /**< -2.7 */
+    SSD1681_VCOM_NEGATIVE_2P8 = 0x70,        /**< -2.8 */
+    SSD1681_VCOM_NEGATIVE_2P9 = 0x74,        /**< -2.9 */
+    SSD1681_VCOM_NEGATIVE_3P0 = 0x78,        /**< -3.0 */
 } ssd1681_vcom_t;
 
 /**

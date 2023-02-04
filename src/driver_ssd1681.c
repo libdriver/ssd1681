@@ -52,7 +52,7 @@
 /**
  * @brief chip command data definition
  */
-#define SSD1681_CMD          0        /**< commmand */
+#define SSD1681_CMD          0        /**< command */
 #define SSD1681_DATA         1        /**< data */
 
 /**
@@ -2768,7 +2768,7 @@ uint8_t ssd1681_gram_fill_rect(ssd1681_handle_t *handle, ssd1681_color_t color, 
     {
         for (y = top; y <= bottom; y++)                                           /* write y */
         {
-            if (a_ssd1681_gram_draw_point(handle, color, x, y, data) != 0)        /* draw poit */
+            if (a_ssd1681_gram_draw_point(handle, color, x, y, data) != 0)        /* draw point */
             {
                 return 1;                                                         /* return error */
             }
@@ -2840,7 +2840,7 @@ uint8_t ssd1681_gram_draw_picture(ssd1681_handle_t *handle, ssd1681_color_t colo
         }
     }
     
-    return 0;                                                                     /* succee return 0 */
+    return 0;                                                                     /* succeed return 0 */
 }
 
 /**
@@ -3221,7 +3221,7 @@ uint8_t ssd1681_info(ssd1681_info_t *info)
     info->max_current_ma = MAX_CURRENT;                             /* set maximum current */
     info->temperature_max = TEMPERATURE_MAX;                        /* set minimal temperature */
     info->temperature_min = TEMPERATURE_MIN;                        /* set maximum temperature */
-    info->driver_version = DRIVER_VERSION;                          /* set driver verison */
+    info->driver_version = DRIVER_VERSION;                          /* set driver version */
     
     return 0;                                                       /* success return 0 */
 }

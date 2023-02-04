@@ -82,7 +82,7 @@ uint8_t ssd1681(uint8_t argc, char** argv)
         {"y2", required_argument, NULL, 9},
         {NULL, 0, NULL, 0},
     };
-    char type[33] = "unknow";
+    char type[33] = "unknown";
     ssd1681_color_t mode = SSD1681_COLOR_BLACK;
     uint8_t color = 1;
     uint8_t x0 = 0;
@@ -515,7 +515,7 @@ int main(void)
     /* uart init */
     uart_init(115200);
     
-    /* shell init && register ssd1681 fuction */
+    /* shell init && register ssd1681 function */
     shell_init();
     shell_register("ssd1681", ssd1681);
     uart_print("ssd1681: welcome to libdriver ssd1681.\n");
@@ -538,7 +538,7 @@ int main(void)
             }
             else if (res == 2)
             {
-                uart_print("ssd1681: unknow command.\n");
+                uart_print("ssd1681: unknown command.\n");
             }
             else if (res == 3)
             {
@@ -554,7 +554,7 @@ int main(void)
             }
             else
             {
-                uart_print("ssd1681: unknow status code.\n");
+                uart_print("ssd1681: unknown status code.\n");
             }
             uart_flush();
         }
