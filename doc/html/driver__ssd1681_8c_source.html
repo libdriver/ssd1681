@@ -2107,7 +2107,7 @@ $(document).ready(function(){initNavTree('driver__ssd1681_8c_source.html',''); i
 <div class="line"><a name="l02768"></a><span class="lineno"> 2768</span>&#160;    {</div>
 <div class="line"><a name="l02769"></a><span class="lineno"> 2769</span>&#160;        <span class="keywordflow">for</span> (y = top; y &lt;= bottom; y++)                                           <span class="comment">/* write y */</span></div>
 <div class="line"><a name="l02770"></a><span class="lineno"> 2770</span>&#160;        {</div>
-<div class="line"><a name="l02771"></a><span class="lineno"> 2771</span>&#160;            <span class="keywordflow">if</span> (a_ssd1681_gram_draw_point(handle, color, x, y, data) != 0)        <span class="comment">/* draw poit */</span></div>
+<div class="line"><a name="l02771"></a><span class="lineno"> 2771</span>&#160;            <span class="keywordflow">if</span> (a_ssd1681_gram_draw_point(handle, color, x, y, data) != 0)        <span class="comment">/* draw point */</span></div>
 <div class="line"><a name="l02772"></a><span class="lineno"> 2772</span>&#160;            {</div>
 <div class="line"><a name="l02773"></a><span class="lineno"> 2773</span>&#160;                <span class="keywordflow">return</span> 1;                                                         <span class="comment">/* return error */</span></div>
 <div class="line"><a name="l02774"></a><span class="lineno"> 2774</span>&#160;            }</div>
@@ -2160,7 +2160,7 @@ $(document).ready(function(){initNavTree('driver__ssd1681_8c_source.html',''); i
 <div class="line"><a name="l02840"></a><span class="lineno"> 2840</span>&#160;        }</div>
 <div class="line"><a name="l02841"></a><span class="lineno"> 2841</span>&#160;    }</div>
 <div class="line"><a name="l02842"></a><span class="lineno"> 2842</span>&#160;    </div>
-<div class="line"><a name="l02843"></a><span class="lineno"> 2843</span>&#160;    <span class="keywordflow">return</span> 0;                                                                     <span class="comment">/* succee return 0 */</span></div>
+<div class="line"><a name="l02843"></a><span class="lineno"> 2843</span>&#160;    <span class="keywordflow">return</span> 0;                                                                     <span class="comment">/* succeed return 0 */</span></div>
 <div class="line"><a name="l02844"></a><span class="lineno"> 2844</span>&#160;}</div>
 <div class="line"><a name="l02845"></a><span class="lineno"> 2845</span>&#160; </div>
 <div class="line"><a name="l02858"></a><span class="lineno"><a class="line" href="group__ssd1681__base__driver.html#ga0ddf061744012e0bc6199ea3b1b1caaa"> 2858</a></span>&#160;uint8_t <a class="code" href="group__ssd1681__base__driver.html#ga0ddf061744012e0bc6199ea3b1b1caaa">ssd1681_init</a>(<a class="code" href="structssd1681__handle__s.html">ssd1681_handle_t</a> *handle)</div>
@@ -2471,7 +2471,7 @@ $(document).ready(function(){initNavTree('driver__ssd1681_8c_source.html',''); i
 <div class="line"><a name="l03221"></a><span class="lineno"> 3221</span>&#160;    info-&gt;<a class="code" href="structssd1681__info__s.html#a9db82802561bf22d799b03a345f1d1dc">max_current_ma</a> = <a class="code" href="driver__ssd1681_8c.html#a2989837a37d6d63b59c6dd541b785435">MAX_CURRENT</a>;                             <span class="comment">/* set maximum current */</span></div>
 <div class="line"><a name="l03222"></a><span class="lineno"> 3222</span>&#160;    info-&gt;<a class="code" href="structssd1681__info__s.html#a3366a5dce9b829e03c3d321c2b4df3f6">temperature_max</a> = <a class="code" href="driver__ssd1681_8c.html#a90c0b20d54005712fcc8cb01281360e9">TEMPERATURE_MAX</a>;                        <span class="comment">/* set minimal temperature */</span></div>
 <div class="line"><a name="l03223"></a><span class="lineno"> 3223</span>&#160;    info-&gt;<a class="code" href="structssd1681__info__s.html#a8f9dbe66ac0b66ebae0a36fcb4ba368e">temperature_min</a> = <a class="code" href="driver__ssd1681_8c.html#aab353db5bf4eb787f86a2080f609a551">TEMPERATURE_MIN</a>;                        <span class="comment">/* set maximum temperature */</span></div>
-<div class="line"><a name="l03224"></a><span class="lineno"> 3224</span>&#160;    info-&gt;<a class="code" href="structssd1681__info__s.html#a41b0bd442708b70d252c50b92c75265a">driver_version</a> = <a class="code" href="driver__ssd1681_8c.html#ae578001fe043b4cca7a0edd801cfe9c4">DRIVER_VERSION</a>;                          <span class="comment">/* set driver verison */</span></div>
+<div class="line"><a name="l03224"></a><span class="lineno"> 3224</span>&#160;    info-&gt;<a class="code" href="structssd1681__info__s.html#a41b0bd442708b70d252c50b92c75265a">driver_version</a> = <a class="code" href="driver__ssd1681_8c.html#ae578001fe043b4cca7a0edd801cfe9c4">DRIVER_VERSION</a>;                          <span class="comment">/* set driver version */</span></div>
 <div class="line"><a name="l03225"></a><span class="lineno"> 3225</span>&#160;    </div>
 <div class="line"><a name="l03226"></a><span class="lineno"> 3226</span>&#160;    <span class="keywordflow">return</span> 0;                                                       <span class="comment">/* success return 0 */</span></div>
 <div class="line"><a name="l03227"></a><span class="lineno"> 3227</span>&#160;}</div>

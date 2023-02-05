@@ -2803,7 +2803,7 @@ uint8_t ssd1681_display_test(void)
     }
 
     /* set the source driving voltage */
-    res = ssd1681_set_source_driving_voltage(&gs_handle, SSD1681_VSH_15V, SSD1681_VSH_5V, SSD1681_VSL_NEGTIVE_15);
+    res = ssd1681_set_source_driving_voltage(&gs_handle, SSD1681_VSH_15V, SSD1681_VSH_5V, SSD1681_VSL_NEGATIVE_15);
     if (res != 0)
     {
         ssd1681_interface_debug_print("ssd1681: set source driving voltage failed.\n");
@@ -2813,7 +2813,7 @@ uint8_t ssd1681_display_test(void)
     }
 
     /* set vcom -0.8 */
-    res = ssd1681_set_vcom_register(&gs_handle, SSD1681_VCOM_NEGTIVE_0P8);
+    res = ssd1681_set_vcom_register(&gs_handle, SSD1681_VCOM_NEGATIVE_0P8);
     if (res != 0)
     {
         ssd1681_interface_debug_print("ssd1681: set vcom register failed.\n");

@@ -45,7 +45,7 @@
 #define SPI_DEVICE_NAME "/dev/spidev0.0"    /**< spi device name */
 
 /**
- * @brief spi device hanble definition
+ * @brief spi device handle definition
  */
 static int gs_fd;                           /**< spi handle */
 
