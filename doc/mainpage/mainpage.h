@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver SSD1681
- * @brief     libdriver ssd1681 is a full function driver of ssd1681 and it can run in both MCU and Linux platform.
+ * @brief     LibDriver SSD1681 is a full function driver of SSD1681 and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
