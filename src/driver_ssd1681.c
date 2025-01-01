@@ -113,10 +113,10 @@
 
 /**
  * @brief     write multiple bytes
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] command is the set command
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] command set command
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -181,10 +181,10 @@ static uint8_t a_ssd1681_multiple_write_byte(ssd1681_handle_t *handle, uint8_t c
 
 /**
  * @brief      read multiple bytes
- * @param[in]  *handle points to an ssd1681 handle structure
- * @param[in]  command is the set command
- * @param[out] *data points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an ssd1681 handle structure
+ * @param[in]  command set command
+ * @param[out] *data pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -249,11 +249,11 @@ static uint8_t a_ssd1681_multiple_read_byte(ssd1681_handle_t *handle, uint8_t co
 
 /**
  * @brief     set the driver output
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] mux is the set mux
- * @param[in] gd is a bool value
- * @param[in] sm is a bool value
- * @param[in] tb is a bool value
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] mux set mux
+ * @param[in] gd bool value
+ * @param[in] sm bool value
+ * @param[in] tb bool value
  * @return    status code
  *            - 0 success
  *            - 1 set driver output failed
@@ -313,8 +313,8 @@ uint8_t ssd1681_set_driver_output(ssd1681_handle_t *handle, uint16_t mux, ssd168
 
 /**
  * @brief     set the gate driving voltage
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] voltage is the gate driving voltage
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] voltage gate driving voltage
  * @return    status code
  *            - 0 success
  *            - 1 set gate driving voltage failed
@@ -350,10 +350,10 @@ uint8_t ssd1681_set_gate_driving_voltage(ssd1681_handle_t *handle, ssd1681_gate_
 
 /**
  * @brief     set the source driving voltage
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] vsh1 is the set vsh1
- * @param[in] vsh2 is the set vsh2
- * @param[in] vsl is the set vsl
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] vsh1 set vsh1
+ * @param[in] vsh2 set vsh2
+ * @param[in] vsl set vsl
  * @return    status code
  *            - 0 success
  *            - 1 set source driving voltage failed
@@ -391,7 +391,7 @@ uint8_t ssd1681_set_source_driving_voltage(ssd1681_handle_t *handle, ssd1681_vsh
 
 /**
  * @brief     initial code setting otp program
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 otp initial failed
@@ -425,8 +425,8 @@ uint8_t ssd1681_otp_initial(ssd1681_handle_t *handle)
 
 /**
  * @brief     write register for initial code setting
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] param points to a param buffer
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] *param pointer to a param buffer
  * @return    status code
  *            - 0 success
  *            - 1 otp initial write failed
@@ -460,7 +460,7 @@ uint8_t ssd1681_otp_initial_write(ssd1681_handle_t *handle, uint8_t param[4])
 
 /**
  * @brief     read register for initial code setting
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 otp initial read failed
@@ -494,11 +494,11 @@ uint8_t ssd1681_otp_initial_read(ssd1681_handle_t *handle)
 
 /**
  * @brief     set the booster soft start
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] phase1 is the phase 1
- * @param[in] phase2 is the phase 2
- * @param[in] phase3 is the phase 3
- * @param[in] duration is the phase duration
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] phase1 phase 1
+ * @param[in] phase2 phase 2
+ * @param[in] phase3 phase 3
+ * @param[in] duration phase duration
  * @return    status code
  *            - 0 success
  *            - 1 set booster soft start failed
@@ -539,8 +539,8 @@ uint8_t ssd1681_set_booster_soft_start(ssd1681_handle_t *handle,
 
 /**
  * @brief     set the mode
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] mode is the set mode
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] mode set mode
  * @return    status code
  *            - 0 success
  *            - 1 set mode failed
@@ -576,9 +576,9 @@ uint8_t ssd1681_set_mode(ssd1681_handle_t *handle, ssd1681_mode_t mode)
 
 /**
  * @brief     set the data entry mode
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] mode is the address mode
- * @param[in] direction is the address direction
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] mode address mode
+ * @param[in] direction address direction
  * @return    status code
  *            - 0 success
  *            - 1 set data entry mode failed
@@ -614,7 +614,7 @@ uint8_t ssd1681_set_data_entry_mode(ssd1681_handle_t *handle, ssd1681_address_mo
 
 /**
  * @brief     software reset
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 software reset failed
@@ -648,9 +648,9 @@ uint8_t ssd1681_software_reset(ssd1681_handle_t *handle)
 
 /**
  * @brief     set the hv ready detection
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] cool_down_duration is the cool down duration 
- * @param[in] cool_down_loop_num is the cool down loop num
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] cool_down_duration cool down duration 
+ * @param[in] cool_down_loop_num cool down loop num
  * @return    status code
  *            - 0 success
  *            - 1 set hv ready detection failed
@@ -702,8 +702,8 @@ uint8_t ssd1681_set_hv_ready_detection(ssd1681_handle_t *handle, uint8_t cool_do
 
 /**
  * @brief     set the vci detection
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] level is the vci level
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] level vci level
  * @return    status code
  *            - 0 success
  *            - 1 set vci detection failed
@@ -739,8 +739,8 @@ uint8_t ssd1681_set_vci_detection(ssd1681_handle_t *handle, ssd1681_vci_level_t 
 
 /**
  * @brief     set the temperature sensor
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] sensor is the temperature sensor
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] sensor temperature sensor
  * @return    status code
  *            - 0 success
  *            - 1 set temperature sensor failed
@@ -776,8 +776,8 @@ uint8_t ssd1681_set_temperature_sensor(ssd1681_handle_t *handle, ssd1681_tempera
 
 /**
  * @brief     write the temperature sensor
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] control is the set control
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] control set control
  * @return    status code
  *            - 0 success
  *            - 1 write temperature sensor failed
@@ -821,8 +821,8 @@ uint8_t ssd1681_write_temperature_sensor(ssd1681_handle_t *handle, uint16_t cont
 
 /**
  * @brief      read the temperature sensor
- * @param[in]  *handle points to an ssd1681 handle structure
- * @param[out] *control points to a control buffer
+ * @param[in]  *handle pointer to an ssd1681 handle structure
+ * @param[out] *control pointer to a control buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature sensor failed
@@ -858,8 +858,8 @@ uint8_t ssd1681_read_temperature_sensor(ssd1681_handle_t *handle, uint16_t *cont
 
 /**
  * @brief     write command to external temperature sensor
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] *param points to a param buffer
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] *param pointer to a param buffer
  * @return    status code
  *            - 0 success
  *            - 1 write temperature sensor ext failed
@@ -893,7 +893,7 @@ uint8_t ssd1681_write_temperature_sensor_ext(ssd1681_handle_t *handle, uint8_t p
 
 /**
  * @brief     master activate
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set master activate failed
@@ -927,9 +927,9 @@ uint8_t ssd1681_set_master_activate(ssd1681_handle_t *handle)
 
 /**
  * @brief     set the display update control
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] red_control is the red control
- * @param[in] black_control is the black control
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] red_control red control
+ * @param[in] black_control black control
  * @return    status code
  *            - 0 success
  *            - 1 set display update control failed
@@ -965,8 +965,8 @@ uint8_t ssd1681_set_display_update_control(ssd1681_handle_t *handle, ssd1681_dis
 
 /**
  * @brief     set the display sequence
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] sequence is the display sequence
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] sequence display sequence
  * @return    status code
  *            - 0 success
  *            - 1 set display sequence failed
@@ -1002,7 +1002,7 @@ uint8_t ssd1681_set_display_sequence(ssd1681_handle_t *handle, ssd1681_display_s
 
 /**
  * @brief     set the black ram
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set black ram failed
@@ -1036,7 +1036,7 @@ uint8_t ssd1681_set_black_ram(ssd1681_handle_t *handle)
 
 /**
  * @brief     set the red ram
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set red ram failed
@@ -1070,7 +1070,7 @@ uint8_t ssd1681_set_red_ram(ssd1681_handle_t *handle)
 
 /**
  * @brief     get the ram
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 get ram failed
@@ -1104,7 +1104,7 @@ uint8_t ssd1681_get_ram(ssd1681_handle_t *handle)
 
 /**
  * @brief     set enter vcom sense
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set enter vcom sense failed
@@ -1138,8 +1138,8 @@ uint8_t ssd1681_set_enter_vcom_sense(ssd1681_handle_t *handle)
 
 /**
  * @brief     set the vcom sense duration
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] duration is the vcom sense duration
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] duration vcom sense duration
  * @return    status code
  *            - 0 success
  *            - 1 set vcom sense duration failed
@@ -1175,7 +1175,7 @@ uint8_t ssd1681_set_vcom_sense_duration(ssd1681_handle_t *handle, uint8_t durati
 
 /**
  * @brief     program vcom otp
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 otp program vcom failed
@@ -1209,7 +1209,7 @@ uint8_t ssd1681_otp_program_vcom(ssd1681_handle_t *handle)
 
 /**
  * @brief     write register for vcom control
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set vcom control reg failed
@@ -1246,8 +1246,8 @@ uint8_t ssd1681_set_vcom_control_reg(ssd1681_handle_t *handle)
 
 /**
  * @brief     write vcom register
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] vcom is the set vcom
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] vcom set vcom
  * @return    status code
  *            - 0 success
  *            - 1 set vcom register failed
@@ -1283,8 +1283,8 @@ uint8_t ssd1681_set_vcom_register(ssd1681_handle_t *handle, ssd1681_vcom_t vcom)
 
 /**
  * @brief      otp register read for display option
- * @param[in]  *handle points to an ssd1681 handle structure
- * @param[out] *param points to a param buffer
+ * @param[in]  *handle pointer to an ssd1681 handle structure
+ * @param[out] *param pointer to a param buffer
  * @return     status code
  *             - 0 success
  *             - 1 otp read register failed
@@ -1318,8 +1318,8 @@ uint8_t ssd1681_otp_read_register(ssd1681_handle_t *handle, uint8_t param[11])
 
 /**
  * @brief      get the user id
- * @param[in]  *handle points to an ssd1681 handle structure
- * @param[out] *id points to an id buffer
+ * @param[in]  *handle pointer to an ssd1681 handle structure
+ * @param[out] *id pointer to an id buffer
  * @return     status code
  *             - 0 success
  *             - 1 get user id failed
@@ -1353,8 +1353,8 @@ uint8_t ssd1681_get_user_id(ssd1681_handle_t *handle, uint8_t id[10])
 
 /**
  * @brief      get the status
- * @param[in]  *handle points to an ssd1681 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an ssd1681 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get status failed
@@ -1388,7 +1388,7 @@ uint8_t ssd1681_get_status(ssd1681_handle_t *handle, uint8_t *status)
 
 /**
  * @brief     program otp of waveform setting
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 otp program waveform failed
@@ -1422,7 +1422,7 @@ uint8_t ssd1681_otp_program_waveform(ssd1681_handle_t *handle)
 
 /**
  * @brief     load otp of waveform setting
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 otp load waveform failed
@@ -1456,9 +1456,9 @@ uint8_t ssd1681_otp_load_waveform(ssd1681_handle_t *handle)
 
 /**
  * @brief     set the lut register
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] *reg points to a register buffer
- * @param[in] len is the register length
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] *reg pointer to a register buffer
+ * @param[in] len register length
  * @return    status code
  *            - 0 success
  *            - 1 set lut register failed
@@ -1492,7 +1492,7 @@ uint8_t ssd1681_set_lut_register(ssd1681_handle_t *handle, uint8_t *reg, uint16_
 
 /**
  * @brief     set the crc calculation
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set crc calculation failed
@@ -1526,8 +1526,8 @@ uint8_t ssd1681_set_crc_calculation(ssd1681_handle_t *handle)
 
 /**
  * @brief      get the crc status
- * @param[in]  *handle points to an ssd1681 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an ssd1681 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get crc status failed
@@ -1563,7 +1563,7 @@ uint8_t ssd1681_get_crc_status(ssd1681_handle_t *handle, uint16_t *status)
 
 /**
  * @brief     program otp selection
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 otp program selection failed
@@ -1597,8 +1597,8 @@ uint8_t ssd1681_otp_program_selection(ssd1681_handle_t *handle)
 
 /**
  * @brief     otp write register for display option
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] *param points to a param buffer
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] *param pointer to a param buffer
  * @return    status code
  *            - 0 success
  *            - 1 otp write register failed
@@ -1632,8 +1632,8 @@ uint8_t ssd1681_otp_write_register(ssd1681_handle_t *handle, uint8_t param[11])
 
 /**
  * @brief     set the user id
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] *id points to an id buffer
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] *id pointer to an id buffer
  * @return    status code
  *            - 0 success
  *            - 1 set user id failed
@@ -1667,8 +1667,8 @@ uint8_t ssd1681_set_user_id(ssd1681_handle_t *handle, uint8_t id[10])
 
 /**
  * @brief     set the otp program mode
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] mode is the otp mode
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] mode otp mode
  * @return    status code
  *            - 0 success
  *            - 1 otp program mode failed
@@ -1704,11 +1704,11 @@ uint8_t ssd1681_otp_program_mode(ssd1681_handle_t *handle, ssd1681_otp_mode_t mo
 
 /**
  * @brief     set the border waveform
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] vbd is the select vbd option
- * @param[in] level is the fix level setting for vbd
- * @param[in] gs_tran is the gs transition control
- * @param[in] vbd_tran is the gs transition setting for vbd
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] vbd select vbd option
+ * @param[in] level fix level setting for vbd
+ * @param[in] gs_tran gs transition control
+ * @param[in] vbd_tran gs transition setting for vbd
  * @return    status code
  *            - 0 success
  *            - 1 set border waveform failed
@@ -1745,8 +1745,8 @@ uint8_t ssd1681_set_border_waveform(ssd1681_handle_t *handle, ssd1681_vbd_t vbd,
 
 /**
  * @brief     end option
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] opt is the end option
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] opt end option
  * @return    status code
  *            - 0 success
  *            - 1 set end option failed
@@ -1782,8 +1782,8 @@ uint8_t ssd1681_set_end_option(ssd1681_handle_t *handle, ssd1681_end_opt_t opt)
 
 /**
  * @brief     set the read ram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] ram is the read ram option
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] ram read ram option
  * @return    status code
  *            - 0 success
  *            - 1 set read ram failed
@@ -1819,9 +1819,9 @@ uint8_t ssd1681_set_read_ram(ssd1681_handle_t *handle, ssd1681_read_ram_t ram)
 
 /**
  * @brief     set the ram x range
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] start is the start address
- * @param[in] end is the end address
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] start start address
+ * @param[in] end end address
  * @return    status code
  *            - 0 success
  *            - 1 set ram x failed
@@ -1872,9 +1872,9 @@ uint8_t ssd1681_set_ram_x(ssd1681_handle_t *handle, uint8_t start, uint8_t end)
 
 /**
  * @brief     set the ram y range
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] start is the start address
- * @param[in] end is the end address
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] start start address
+ * @param[in] end end address
  * @return    status code
  *            - 0 success
  *            - 1 set ram y failed
@@ -1913,9 +1913,9 @@ uint8_t ssd1681_set_ram_y(ssd1681_handle_t *handle, uint16_t start, uint16_t end
 
 /**
  * @brief     set the auto write red ram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] height is the step height
- * @param[in] width is the step width
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] height step height
+ * @param[in] width step width
  * @return    status code
  *            - 0 success
  *            - 1 set auto write red ram failed
@@ -1951,9 +1951,9 @@ uint8_t ssd1681_set_auto_write_red_ram(ssd1681_handle_t *handle, ssd1681_step_he
 
 /**
  * @brief     set the auto write black ram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] height is the step height
- * @param[in] width is the step width
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] height step height
+ * @param[in] width step width
  * @return    status code
  *            - 0 success
  *            - 1 set auto write black ram failed
@@ -1989,8 +1989,8 @@ uint8_t ssd1681_set_auto_write_black_ram(ssd1681_handle_t *handle, ssd1681_step_
 
 /**
  * @brief     set the ram x address counter
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] cnt is the address counter
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] cnt address counter
  * @return    status code
  *            - 0 success
  *            - 1 set ram x address counter failed
@@ -2033,8 +2033,8 @@ uint8_t ssd1681_set_ram_x_address_counter(ssd1681_handle_t *handle, uint8_t cnt)
 
 /**
  * @brief     set the ram y address counter
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] cnt is the address counter
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] cnt address counter
  * @return    status code
  *            - 0 success
  *            - 1 set ram y address counter failed
@@ -2078,7 +2078,7 @@ uint8_t ssd1681_set_ram_y_address_counter(ssd1681_handle_t *handle, uint16_t cnt
 
 /**
  * @brief     nop command
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 nop failed
@@ -2112,11 +2112,11 @@ uint8_t ssd1681_nop(ssd1681_handle_t *handle)
 
 /**
  * @brief     draw a point in gram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] color is the color type
- * @param[in] x is the coordinate x
- * @param[in] y is the coordinate y
- * @param[in] data is the written data
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] color color type
+ * @param[in] x coordinate x
+ * @param[in] y coordinate y
+ * @param[in] data written data
  * @return    status code
  *            - 0 success
  *            - 1 gram draw point failed
@@ -2159,13 +2159,13 @@ static uint8_t a_ssd1681_gram_draw_point(ssd1681_handle_t *handle, ssd1681_color
 
 /**
  * @brief     draw a char in gram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] color is the color type
- * @param[in] x is the coordinate x
- * @param[in] y is the coordinate y
- * @param[in] chr is the written char
- * @param[in] size is the char size
- * @param[in] mode is the display mode
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] color color type
+ * @param[in] x coordinate x
+ * @param[in] y coordinate y
+ * @param[in] chr written char
+ * @param[in] size char size
+ * @param[in] mode display mode
  * @return    status code
  *            - 0 success
  *            - 1 gram show char failed
@@ -2229,8 +2229,8 @@ static uint8_t a_ssd1681_gram_show_char(ssd1681_handle_t *handle, ssd1681_color_
 
 /**
  * @brief     clear the screen
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] color is the color type
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] color color type
  * @return    status code
  *            - 0 success
  *            - 1 clear failed
@@ -2355,8 +2355,8 @@ uint8_t ssd1681_clear(ssd1681_handle_t *handle, ssd1681_color_t color)
 
 /**
  * @brief     update the gram data
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] color is the color type
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] color color type
  * @return    status code
  *            - 0 success
  *            - 1 gram update failed
@@ -2479,8 +2479,8 @@ uint8_t ssd1681_gram_update(ssd1681_handle_t *handle, ssd1681_color_t color)
 
 /**
  * @brief     clear the screen in the gram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] color is the color type
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] color color type
  * @return    status code
  *            - 0 success
  *            - 1 clear failed
@@ -2528,11 +2528,11 @@ uint8_t ssd1681_gram_clear(ssd1681_handle_t *handle, ssd1681_color_t color)
 
 /**
  * @brief     write a point in the gram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] color is the color type
- * @param[in] x is the coordinate x
- * @param[in] y is the coordinate y
- * @param[in] data is the written data
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] color color type
+ * @param[in] x coordinate x
+ * @param[in] y coordinate y
+ * @param[in] data written data
  * @return    status code
  *            - 0 success
  *            - 1 gram write point failed
@@ -2593,11 +2593,11 @@ uint8_t ssd1681_gram_write_point(ssd1681_handle_t *handle, ssd1681_color_t color
 
 /**
  * @brief      read a point from the gram
- * @param[in]  *handle points to an ssd1681 handle structure
- * @param[in]  color is the color type
- * @param[in]  x is the coordinate x
- * @param[in]  y is the coordinate y
- * @param[out] *data points to a data buffer
+ * @param[in]  *handle pointer to an ssd1681 handle structure
+ * @param[in]  color color type
+ * @param[in]  x coordinate x
+ * @param[in]  y coordinate y
+ * @param[out] *data pointer to a data buffer
  * @return     status code
  *             - 0 success
  *             - 1 gram read point failed
@@ -2658,14 +2658,14 @@ uint8_t ssd1681_gram_read_point(ssd1681_handle_t *handle, ssd1681_color_t color,
 
 /**
  * @brief     draw a string in the gram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] color is the color type
- * @param[in] x is the coordinate x
- * @param[in] y is the coordinate y
- * @param[in] *str points to a write string address
- * @param[in] len is the length of the string
- * @param[in] data is the display color
- * @param[in] font is the display font size
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] color color type
+ * @param[in] x coordinate x
+ * @param[in] y coordinate y
+ * @param[in] *str pointer to a write string address
+ * @param[in] len length of the string
+ * @param[in] data display color
+ * @param[in] font display font size
  * @return    status code
  *            - 0 success
  *            - 1 gram write string failed
@@ -2716,13 +2716,13 @@ uint8_t ssd1681_gram_write_string(ssd1681_handle_t *handle, ssd1681_color_t colo
 
 /**
  * @brief     fill a rectangle in the gram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] color is the color type
- * @param[in] left is the left coordinate x
- * @param[in] top is the top coordinate y
- * @param[in] right is the right coordinate x
- * @param[in] bottom is the bottom coordinate y
- * @param[in] data is the display color
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] color color type
+ * @param[in] left left coordinate x
+ * @param[in] top top coordinate y
+ * @param[in] right right coordinate x
+ * @param[in] bottom bottom coordinate y
+ * @param[in] data display color
  * @return    status code
  *            - 0 success
  *            - 1 gram fill rect failed
@@ -2780,13 +2780,13 @@ uint8_t ssd1681_gram_fill_rect(ssd1681_handle_t *handle, ssd1681_color_t color, 
 
 /**
  * @brief     draw a picture in the gram
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] color is the color type
- * @param[in] left is the left coordinate x
- * @param[in] top is the top coordinate y
- * @param[in] right is the right coordinate x
- * @param[in] bottom is the bottom coordinate y
- * @param[in] *img points to an image buffer
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] color color type
+ * @param[in] left left coordinate x
+ * @param[in] top top coordinate y
+ * @param[in] right right coordinate x
+ * @param[in] bottom bottom coordinate y
+ * @param[in] *img pointer to an image buffer
  * @return    status code
  *            - 0 success
  *            - 1 gram draw picture failed
@@ -2845,7 +2845,7 @@ uint8_t ssd1681_gram_draw_picture(ssd1681_handle_t *handle, ssd1681_color_t colo
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi initialization failed
@@ -3004,7 +3004,7 @@ uint8_t ssd1681_init(ssd1681_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an ssd1681 handle structure
+ * @param[in] *handle pointer to an ssd1681 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi deinit failed
@@ -3073,9 +3073,9 @@ uint8_t ssd1681_deinit(ssd1681_handle_t *handle)
 
 /**
  * @brief     write the register command
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -3115,9 +3115,9 @@ uint8_t ssd1681_write_cmd(ssd1681_handle_t *handle, uint8_t *buf, uint8_t len)
 
 /**
  * @brief     write the register data
- * @param[in] *handle points to an ssd1681 handle structure
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an ssd1681 handle structure
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -3157,9 +3157,9 @@ uint8_t ssd1681_write_data(ssd1681_handle_t *handle, uint8_t *buf, uint8_t len)
 
 /**
  * @brief      read the register data
- * @param[in]  *handle points to an ssd1681 handle structure
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an ssd1681 handle structure
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -3199,7 +3199,7 @@ uint8_t ssd1681_read_data(ssd1681_handle_t *handle, uint8_t *buf, uint8_t len)
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an ssd1681 info structure
+ * @param[out] *info pointer to an ssd1681 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL

@@ -62,8 +62,8 @@ uint8_t ssd1681_interface_spi_deinit(void)
 
 /**
  * @brief     interface spi bus write
- * @param[in] *buf points to a data buffer
- * @param[in] len is the length of data buffer
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len length of data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -76,8 +76,8 @@ uint8_t ssd1681_interface_spi_write_cmd(uint8_t *buf, uint16_t len)
 
 /**
  * @brief      interface spi bus read
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the length of data buffer
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -90,7 +90,7 @@ uint8_t ssd1681_interface_spi_read_cmd(uint8_t *buf, uint16_t len)
 
 /**
  * @brief     interface delay ms
- * @param[in] ms
+ * @param[in] ms time
  * @note      none
  */
 void ssd1681_interface_delay_ms(uint32_t ms)
@@ -100,7 +100,7 @@ void ssd1681_interface_delay_ms(uint32_t ms)
 
 /**
  * @brief     interface print format data
- * @param[in] fmt is the format data
+ * @param[in] fmt format data
  * @note      none
  */
 void ssd1681_interface_debug_print(const char *const fmt, ...)
@@ -134,7 +134,7 @@ uint8_t ssd1681_interface_spi_cmd_data_gpio_deinit(void)
 
 /**
  * @brief     interface command && data gpio write
- * @param[in] value is the written value
+ * @param[in] value written value
  * @return    status code
  *            - 0 success
  *            - 1 gpio write failed
@@ -171,7 +171,7 @@ uint8_t ssd1681_interface_reset_gpio_deinit(void)
 
 /**
  * @brief     interface reset gpio write
- * @param[in] value is the written value
+ * @param[in] value written value
  * @return    status code
  *            - 0 success
  *            - 1 gpio write failed
@@ -208,7 +208,7 @@ uint8_t ssd1681_interface_busy_gpio_deinit(void)
 
 /**
  * @brief      interface busy gpio read
- * @param[out] *value points to a value buffer
+ * @param[out] *value pointer to a value buffer
  * @return     status code
  *             - 0 success
  *             - 1 gpio read failed
