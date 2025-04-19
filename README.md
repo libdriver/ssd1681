@@ -10,7 +10,7 @@
 
 SSD1681 is an Active Matrix EPD display driver with controller for Red/Black/White EPD displays.It consists of 200 source outputs, 200 gate outputs, 1 VCOM and 1VBD (for border), which can support displays with resolution up to 200x200.In the SSD1681, data and commands are sent from MCU through hardware selectable serial peripheral interface.It has embedded booster, regulator and oscillator which is suitable for EPD display applications.
 
-LibDriver SSD1681 is the full function driver of SSD1681 launched by LibDriver.It provides the functions of drawing single point, filling block, image display, etc. LibDriver is MISRA compliant.
+LibDriver SSD1681 is a full-featured driver of SSD1681 launched by LibDriver.It provides the functions of drawing single point, filling block, image display, etc. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
