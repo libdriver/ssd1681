@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['black_5fgram_0',['black_gram',['../structssd1681__handle__s.html#aa856d116f20649a9389d1781a62ba2af',1,'ssd1681_handle_s']]],
-  ['busy_5fgpio_5fdeinit_1',['busy_gpio_deinit',['../structssd1681__handle__s.html#a8256cbe0ed255c47f044781f96367b2e',1,'ssd1681_handle_s']]],
-  ['busy_5fgpio_5finit_2',['busy_gpio_init',['../structssd1681__handle__s.html#a4a6a284aa9920ebc96fd1fea07887827',1,'ssd1681_handle_s']]],
-  ['busy_5fgpio_5fread_3',['busy_gpio_read',['../structssd1681__handle__s.html#ad8ca628ecb8f5d04ff902c4c7459fe36',1,'ssd1681_handle_s']]]
+  ['base_20driver_20function_0',['ssd1681 base driver function',['../group__ssd1681__base__driver.html',1,'']]],
+  ['black_5fgram_1',['black_gram',['../structssd1681__handle__s.html#aa856d116f20649a9389d1781a62ba2af',1,'ssd1681_handle_s']]],
+  ['busy_5fgpio_5fdeinit_2',['busy_gpio_deinit',['../structssd1681__handle__s.html#a8256cbe0ed255c47f044781f96367b2e',1,'ssd1681_handle_s']]],
+  ['busy_5fgpio_5finit_3',['busy_gpio_init',['../structssd1681__handle__s.html#a4a6a284aa9920ebc96fd1fea07887827',1,'ssd1681_handle_s']]],
+  ['busy_5fgpio_5fread_4',['busy_gpio_read',['../structssd1681__handle__s.html#ad8ca628ecb8f5d04ff902c4c7459fe36',1,'ssd1681_handle_s']]]
 ];
