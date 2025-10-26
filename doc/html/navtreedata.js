@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "LibDriver SSD1681", "index.html", [
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -51,11 +51,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__ssd1681__base__driver.html#ga8e311cca46ecfe3d33bbaee9771107b3",
-"group__ssd1681__base__driver.html#ggaab81459420341dc1f8a47530af7fe6c6a088cd8b1df82652c5e0f7e52df00e577",
-"group__ssd1681__base__driver.html#ggaae6451d079a124fbfb995c79df17dfabadd0e44442cd344fd475b05dcdf93080e",
-"group__ssd1681__extend__driver.html#gaa515a57edad7ac3c00683912ebbcf98a"
+"group__ssd1681__base__driver.html#gga68bba376e916a61d74855013a17534dba9bf1476c54bf032ada0b3d6f8012a645",
+"group__ssd1681__example__driver.html#ga978a7940f0ab18b1e9ca65fdab3a960a"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';
