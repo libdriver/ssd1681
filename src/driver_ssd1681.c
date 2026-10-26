@@ -1556,7 +1556,7 @@ uint8_t ssd1681_get_crc_status(ssd1681_handle_t *handle, uint16_t *status)
         
         return 1;                                                                           /* return error */
     }
-    *status = (uint16_t)(buf[0] << 0) | buf[1];                                             /* set the status */
+    *status = (uint16_t)(buf[0] << 8) | buf[1];                                             /* set the status */
     
     return 0;                                                                               /* success return 0 */
 }
@@ -2555,7 +2555,7 @@ uint8_t ssd1681_gram_write_point(ssd1681_handle_t *handle, ssd1681_color_t color
     {
         return 3;                                                    /* return error */
     }
-    if ((x > 200) || (y > 200))                                      /* check x, y */
+    if ((x > 199) || (y > 199))                                      /* check x, y */
     {
         handle->debug_print("ssd1681: x or y is invalid.\n");        /* x or y is invalid */
         
@@ -2620,7 +2620,7 @@ uint8_t ssd1681_gram_read_point(ssd1681_handle_t *handle, ssd1681_color_t color,
     {
         return 3;                                                    /* return error */
     }
-    if ((x > 200) || (y > 200))                                      /* check x, y */
+    if ((x > 199) || (y > 199))                                      /* check x, y */
     {
         handle->debug_print("ssd1681: x or y is invalid.\n");        /* x or y is invalid */
         
