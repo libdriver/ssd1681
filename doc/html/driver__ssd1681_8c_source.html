@@ -1263,7 +1263,7 @@ $(function(){initNavTree('driver__ssd1681_8c_source.html','',''); });
 <div class="line"><a id="l01556" name="l01556"></a><span class="lineno"> 1556</span>        </div>
 <div class="line"><a id="l01557" name="l01557"></a><span class="lineno"> 1557</span>        <span class="keywordflow">return</span> 1;                                                                           <span class="comment">/* return error */</span></div>
 <div class="line"><a id="l01558" name="l01558"></a><span class="lineno"> 1558</span>    }</div>
-<div class="line"><a id="l01559" name="l01559"></a><span class="lineno"> 1559</span>    *status = (uint16_t)(buf[0] &lt;&lt; 0) | buf[1];                                             <span class="comment">/* set the status */</span></div>
+<div class="line"><a id="l01559" name="l01559"></a><span class="lineno"> 1559</span>    *status = (uint16_t)(buf[0] &lt;&lt; 8) | buf[1];                                             <span class="comment">/* set the status */</span></div>
 <div class="line"><a id="l01560" name="l01560"></a><span class="lineno"> 1560</span>    </div>
 <div class="line"><a id="l01561" name="l01561"></a><span class="lineno"> 1561</span>    <span class="keywordflow">return</span> 0;                                                                               <span class="comment">/* success return 0 */</span></div>
 <div class="line"><a id="l01562" name="l01562"></a><span class="lineno"> 1562</span>}</div>
@@ -2061,7 +2061,7 @@ $(function(){initNavTree('driver__ssd1681_8c_source.html','',''); });
 <div class="line"><a id="l02555" name="l02555"></a><span class="lineno"> 2555</span>    {</div>
 <div class="line"><a id="l02556" name="l02556"></a><span class="lineno"> 2556</span>        <span class="keywordflow">return</span> 3;                                                    <span class="comment">/* return error */</span></div>
 <div class="line"><a id="l02557" name="l02557"></a><span class="lineno"> 2557</span>    }</div>
-<div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span>    <span class="keywordflow">if</span> ((x &gt; 200) || (y &gt; 200))                                      <span class="comment">/* check x, y */</span></div>
+<div class="line"><a id="l02558" name="l02558"></a><span class="lineno"> 2558</span>    <span class="keywordflow">if</span> ((x &gt; 199) || (y &gt; 199))                                      <span class="comment">/* check x, y */</span></div>
 <div class="line"><a id="l02559" name="l02559"></a><span class="lineno"> 2559</span>    {</div>
 <div class="line"><a id="l02560" name="l02560"></a><span class="lineno"> 2560</span>        handle-&gt;<a class="code hl_variable" href="structssd1681__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b">debug_print</a>(<span class="stringliteral">&quot;ssd1681: x or y is invalid.\n&quot;</span>);        <span class="comment">/* x or y is invalid */</span></div>
 <div class="line"><a id="l02561" name="l02561"></a><span class="lineno"> 2561</span>        </div>
@@ -2113,7 +2113,7 @@ $(function(){initNavTree('driver__ssd1681_8c_source.html','',''); });
 <div class="line"><a id="l02620" name="l02620"></a><span class="lineno"> 2620</span>    {</div>
 <div class="line"><a id="l02621" name="l02621"></a><span class="lineno"> 2621</span>        <span class="keywordflow">return</span> 3;                                                    <span class="comment">/* return error */</span></div>
 <div class="line"><a id="l02622" name="l02622"></a><span class="lineno"> 2622</span>    }</div>
-<div class="line"><a id="l02623" name="l02623"></a><span class="lineno"> 2623</span>    <span class="keywordflow">if</span> ((x &gt; 200) || (y &gt; 200))                                      <span class="comment">/* check x, y */</span></div>
+<div class="line"><a id="l02623" name="l02623"></a><span class="lineno"> 2623</span>    <span class="keywordflow">if</span> ((x &gt; 199) || (y &gt; 199))                                      <span class="comment">/* check x, y */</span></div>
 <div class="line"><a id="l02624" name="l02624"></a><span class="lineno"> 2624</span>    {</div>
 <div class="line"><a id="l02625" name="l02625"></a><span class="lineno"> 2625</span>        handle-&gt;<a class="code hl_variable" href="structssd1681__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b">debug_print</a>(<span class="stringliteral">&quot;ssd1681: x or y is invalid.\n&quot;</span>);        <span class="comment">/* x or y is invalid */</span></div>
 <div class="line"><a id="l02626" name="l02626"></a><span class="lineno"> 2626</span>        </div>
